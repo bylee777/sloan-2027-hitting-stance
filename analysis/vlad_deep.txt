@@ -1,0 +1,50 @@
+attack direction vs contact point out front (RHB): corr -0.83
+attack direction vs contact point out front (LHB): corr -0.81
+
+=== Guerrero by season (balls in play with bat tracking); league 2026 in last column
+year                                2024    2025    2026  league 2026
+n                                 475.00  475.00  447.00    113723.00
+bat speed                          75.67   76.39   76.15        71.87
+bat speed SD                        5.06    4.95    4.95         5.25
+attack angle                        2.69   -0.65   -0.03         8.67
+attack angle SD                     7.26    7.89    7.66         8.48
+swing-path tilt                    28.37   27.41   28.48        31.98
+attack direction                    0.67   -1.57   -1.31         0.24
+contact point out front (in)       32.40   33.04   32.89        30.28
+contact point SD (timing spread)    7.69    8.61    8.62         7.81
+plane mismatch (deg)               -3.67   -7.07   -6.28         2.34
+|plane mismatch|                    6.19    8.16    7.52         6.96
+EV                                 93.25   91.92   90.49        88.72
+launch angle                        8.03    8.15    8.17        14.24
+LA SD                              27.24   28.58   29.89        28.43
+topped (LA<-5)%                    28.21   29.26   30.87        22.79
+under (LA>45)%                      7.37    9.68   11.86        13.17
+
+=== timing (league 20th/80th pct of contact point: 23.6 / 36.6 in): share of balls in play | xwOBA on contact
+year                       2024          2025          2026
+timing                                                     
+late (deep)        12.8% |  303  14.5% |  273  13.4% |  309
+on time            58.5% |  485  52.6% |  399  53.0% |  357
+early (out front)  28.6% |  479  32.8% |  480  33.6% |  343
+
+=== league contact-quality model (trained on every other hitter)
+   exit velocity: held-out R^2 0.45
+      actual  predicted  actual minus predicted
+year                                           
+2024    93.2       89.9                     3.3
+2025    91.9       89.6                     2.4
+2026    90.5       89.3                     1.2
+      2026 with swing path (attack angle, tilt, direction) moved back to his 2024 average: predicted +0.5
+      2026 with timing (where he meets the ball) moved back to his 2024 average: predicted +0.1
+      2026 with bat speed / length moved back to his 2024 average: predicted -0.0
+      2026 with pitch location & type moved back to his 2024 average: predicted +0.1
+   xwOBA on contact: held-out R^2 0.09
+      actual  predicted  actual minus predicted
+year                                           
+2024   459.8      379.1                    80.7
+2025   407.2      363.7                    43.5
+2026   346.1      362.8                   -16.7
+      2026 with swing path (attack angle, tilt, direction) moved back to his 2024 average: predicted +12.9
+      2026 with timing (where he meets the ball) moved back to his 2024 average: predicted +0.1
+      2026 with bat speed / length moved back to his 2024 average: predicted -0.8
+      2026 with pitch location & type moved back to his 2024 average: predicted +2.3

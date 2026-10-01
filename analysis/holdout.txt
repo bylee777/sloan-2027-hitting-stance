@@ -1,0 +1,24 @@
+C1. depth vs SAME- minus OPPOSITE-hand pitchers (in), per season
+   2024: mean +0.12, SD 0.62, |diff| >= 3 in: 3 of 374
+   2025: mean +0.07, SD 0.56, |diff| >= 3 in: 0 of 365
+   2026: mean +0.15, SD 0.57, |diff| >= 3 in: 1 of 380
+
+C2. chase-prone hitters, per ft deeper vs SAME-hand (same-minus-opposite): chase (- helps) | run value /100 (+ helps)
+   2025 (prior chase > 30.6%, 163 hitters): chase -3.02 (z -2.6) | rv +0.65 (z +2.1)
+   2026 (prior chase > 30.8%, 159 hitters): chase -5.91 (z -4.1) | rv +0.68 (z +1.6)
+
+C3. DEPTH movers back: post minus baseline, by season (mean ± SE)
+   chase pp       2024 BACK -1.84±2.83 (n10) | 2025 BACK -6.92±1.80 (n7) | 2026 BACK +1.01±6.74 (n3)
+   sweet-spot pp  2024 BACK +6.68±1.83 (n8) | 2025 BACK +5.71±1.44 (n5) | 2026 BACK +8.26±2.13 (n3)
+   xwOBA-con      2024 BACK +32.50±20.94 (n8) | 2025 BACK +49.67±19.13 (n5) | 2026 BACK +55.53±30.98 (n3)
+
+C4. WIDTH changes: post minus baseline, by season
+   whiff pp       2024 WIDE -1.83±1.03 (n26) | 2024 NARR -0.44±0.83 (n27) | 2025 WIDE -1.92±1.11 (n28) | 2025 NARR +0.56±1.19 (n26) | 2026 WIDE -1.86±0.97 (n34) | 2026 NARR -0.67±1.31 (n30)
+   K pp           2024 WIDE -3.31±1.49 (n24) | 2024 NARR -0.43±1.02 (n27) | 2025 WIDE -1.62±1.22 (n27) | 2025 NARR -0.12±1.25 (n25) | 2026 WIDE -0.08±1.18 (n33) | 2026 NARR -1.21±1.45 (n30)
+   swing len ft   2024 WIDE -0.04±0.03 (n24) | 2024 NARR +0.05±0.04 (n25) | 2025 WIDE +0.00±0.02 (n28) | 2025 NARR +0.07±0.03 (n26) | 2026 WIDE -0.06±0.03 (n34) | 2026 NARR +0.05±0.03 (n30)
+   bat speed      2024 WIDE -0.20±0.25 (n24) | 2024 NARR +0.24±0.22 (n25) | 2025 WIDE +0.08±0.32 (n28) | 2025 NARR +0.23±0.31 (n26) | 2026 WIDE -0.24±0.19 (n34) | 2026 NARR +0.61±0.26 (n30)
+
+C5. per ft CLOSER to the plate: whiff on AWAY / IN pitches vs middle, per season
+   2024: AWAY -4.12 (z -3.5) | IN +3.65 (z +2.6)
+   2025: AWAY -3.88 (z -3.6) | IN +4.50 (z +3.2)
+   2026: AWAY -2.00 (z -1.7) | IN +2.34 (z +1.7)

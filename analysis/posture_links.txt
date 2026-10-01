@@ -1,0 +1,19 @@
+1. ZONE REBUILD (871 hitter-seasons, 500+ pitches): all-pitch median minus takes-only median: top -0.02 in (|d| mean 0.07, 90th pct 0.15); bottom -0.03 in (|d| 0.05)
+   swings vs takes, per-pitch median zone top: -0.02 in; corr(gap, swing rate) = -0.05
+
+2. RUN-VALUE ACCOUNTING vs posture (623 hitter-seasons, 250+ PA; per 1 point of height lower zone top; height + year controls; runs/600 PA)
+   DECISIONS   +0.01 (z +0.1)
+   WHIFFS      +0.17 (z +1.5)
+   INPUTS      -0.66 (z -3.2)
+   SQUARING    -0.13 (z -0.6)
+   LUCK        +0.33 (z +1.9)
+   OTHER       -0.02 (z -0.2)
+   TOTAL       -0.29 (z -0.8)
+
+3. MATCHUPS: zone top vs same- minus opposite-hand pitchers, within hitter-season (503 with 150+ takes each): mean -0.06 in, SD 0.25; |diff| >= 1 in: 0.4%
+
+4. STANCE-CHANGE EVENTS (2024-25, 2 months after vs before): change in zone top (in)
+   width: wider -0.86 (n 47), narrower +0.68 (n 48); per 3 in of change -0.39 (z -8.3)
+   depth: deeper +0.41 (n 17), shallower -0.63 (n 11); per 3 in of change +0.28 (z +3.4)
+
+5. GUERRERO (takes): 2024: zone top 44.1 in, bottom 20.3 in (n 1347.0); 2025: zone top 44.2 in, bottom 19.8 in (n 1440.0)

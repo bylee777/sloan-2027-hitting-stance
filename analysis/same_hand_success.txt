@@ -1,0 +1,46 @@
+1119 hitter-seasons, 537 hitters. League same-hand penalty (xwOBA per PA): LHB -46 pts, RHB -18 pts; one season's split SE ~42 pts
+how repeatable is a hitter's excess same-hand penalty season to season? r = +0.14 (n 570)
+
+habitual adjusters (same direction, >= 2 seasons): 16 hitters, 20 hitter-lever habits
+   by lever: offp 7, angle 6, foot 3, depth 2, width 2
+   non-adjusters n 336: mean excess  -0.5 pts, better than league every season 24%, clearly better (z > 1.64) 7%
+   adjusters     n  16: mean excess  -3.1 pts, better than league every season 12%, clearly better (z > 1.64) 6%
+   (by chance alone ~5% would be 'clearly better')
+
+habitual adjusters, best same-hand results first (excess = smaller penalty than typical; + is good):
+              name side lever                         move          seasons  ex_xw   se  ex_K  se_K  off_ex_xw                        verdict
+   Schwarber, Kyle    L  offp 2.1 in farther off the plate       2025, 2026   62.0 20.2   5.3   2.3       15.4                  WORKS (clear)
+     Vientos, Mark    R  offp 2.1 in farther off the plate       2024, 2025   35.0 26.3  -0.1   3.0      -40.5 better every season, not clear
+   Mullins, Cedric    L angle            6.9 deg more open       2025, 2026   26.4 26.9   9.4   3.0       -9.0                             no
+       Young, Cole    L angle            5.8 deg more open       2025, 2026   22.4 26.8  -1.7   3.0        NaN better every season, not clear
+   Schanuel, Nolan    L width                 2.9 in wider       2024, 2025   16.1 25.5   1.4   2.9      -22.6                             no
+     Gorman, Nolan    L angle            7.8 deg more open 2024, 2025, 2026   14.2 26.4   6.6   3.0        NaN                             no
+     Gorman, Nolan    L  foot 9.9 deg front foot more open 2024, 2025, 2026   14.2 26.4   6.6   3.0        NaN                             no
+     Rosario, Amed    R  offp 2.2 in farther off the plate       2025, 2026   12.3 37.1  -9.5   4.2       -6.5                             no
+       Smith, Will    R angle            6.5 deg more open       2024, 2026    9.7 28.4  -0.6   3.2       15.8                             no
+       Smith, Will    R  foot 5.7 deg front foot more open       2024, 2026    9.7 28.4  -0.6   3.2       15.8                             no
+  Freeman, Freddie    L  offp 2.0 in farther off the plate       2024, 2026   -0.3 21.6   0.7   2.4       19.9                             no
+  Butler, Lawrence    L width                 5.6 in wider 2024, 2025, 2026   -6.8 22.1  -3.2   2.5        NaN                             no
+    Ohtani, Shohei    L  foot 8.5 deg front foot more open 2024, 2025, 2026  -17.6 17.1   0.7   1.9        NaN                             no
+Benintendi, Andrew    L angle          6.0 deg more closed       2025, 2026  -18.6 33.9  -6.7   3.8       36.6                             no
+    Ohtani, Shohei    L angle            7.8 deg more open       2024, 2025  -31.6 20.3   0.5   2.3       16.9                             no
+     Pederson, Joc    L  offp 2.4 in farther off the plate       2024, 2026  -38.1 43.4 -16.8   4.9        NaN                             no
+     Pederson, Joc    L depth                2.8 in deeper       2024, 2026  -38.1 43.4 -16.8   4.9        NaN                             no
+    Devers, Rafael    L depth                2.4 in deeper       2024, 2025  -38.5 21.1  -3.0   2.4      -56.4                             no
+    Anthony, Roman    L  offp 2.1 in farther off the plate       2025, 2026  -39.9 34.0  -2.2   3.9        NaN                             no
+  García Jr., Luis    L  offp 2.2 in farther off the plate       2024, 2026  -41.5 28.9  -0.2   3.3      -66.8                             no
+
+same hitter, seasons WITH the adjustment minus WITHOUT: +10.2 pts xwOBA (SE 11.2, n 12)
+
+season detail for the best cases (same = vs same-hand pitchers):
+   Schwarber, Kyle    2024: off plate same  27.7 / opp  26.1 in, angle same   -6.5 / opp   -3.2 | xwOBA same  361 / opp  389 (PA 249/444) | K% same 26.9 / opp 29.3 | excess  +15 (SE 29)
+   Schwarber, Kyle    2025: off plate same  26.6 / opp  24.5 in, angle same   -9.7 / opp   -7.6 | xwOBA same  399 / opp  401 (PA 277/449) | K% same 27.8 / opp 26.7 | excess  +48 (SE 28)
+   Schwarber, Kyle    2026: off plate same  26.6 / opp  24.4 in, angle same   -9.2 / opp   -7.1 | xwOBA same  384 / opp  353 (PA 251/428) | K% same 27.5 / opp 34.6 | excess  +77 (SE 29)
+   Vientos, Mark      2024: off plate same  30.4 / opp  28.4 in, angle same   -8.9 / opp  -10.3 | xwOBA same  343 / opp  305 (PA 315/140) | K% same 29.2 / opp 30.7 | excess  +57 (SE 37)
+   Vientos, Mark      2025: off plate same  29.4 / opp  27.4 in, angle same   -6.2 / opp   -6.0 | xwOBA same  319 / opp  321 (PA 327/136) | K% same 25.7 / opp 22.8 | excess  +13 (SE 37)
+   Vientos, Mark      2026: off plate same  28.3 / opp  26.6 in, angle same   -3.6 / opp   -2.6 | xwOBA same  286 / opp  346 (PA 167/116) | K% same 25.7 / opp 21.6 | excess  -40 (SE 44)
+   Young, Cole        2025: off plate same  25.3 / opp  23.4 in, angle same  -12.4 / opp   -6.1 | xwOBA same  296 / opp  297 (PA 67/190) | K% same 20.9 / opp 17.4 | excess  +50 (SE 52)
+   Young, Cole        2026: off plate same  22.8 / opp  21.8 in, angle same  -33.6 / opp  -28.3 | xwOBA same  290 / opp  323 (PA 206/415) | K% same 19.9 / opp 15.7 | excess  +13 (SE 31)
+   Mullins, Cedric    2024: off plate same  25.9 / opp  25.2 in, angle same  -10.5 / opp   -7.0 | xwOBA same  251 / opp  304 (PA 101/398) | K% same 19.8 / opp 19.6 | excess   -9 (SE 41)
+   Mullins, Cedric    2025: off plate same  23.7 / opp  24.3 in, angle same  -17.5 / opp   -9.2 | xwOBA same  294 / opp  275 (PA 132/366) | K% same 15.9 / opp 27.0 | excess  +70 (SE 37)
+   Mullins, Cedric    2026: off plate same  25.3 / opp  25.0 in, angle same  -17.6 / opp  -12.1 | xwOBA same  214 / opp  281 (PA 116/373) | K% same 17.2 / opp 19.6 | excess  -21 (SE 39)

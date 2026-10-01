@@ -1,0 +1,31 @@
+          cfg                 eye  rv_R2  chase_ll  whiff_ll  mech_away  mech_in  default  adjust  upper  deeper  two_pos
+s0_2024to2025            original 0.0335    0.4057    0.4238      -5.45     5.96   0.1796 -0.0022  0.041     1.0   0.0047
+s0_2024to2025         posture eye 0.0332    0.4069    0.4244      -5.57     5.99   0.1791 -0.0016  0.041     1.0   0.0051
+s1_2024to2025            original 0.0329    0.4048    0.4236      -4.66     4.44   0.1659 -0.0058  0.032     1.0   0.0005
+s1_2024to2025         posture eye 0.0325    0.4059    0.4234      -4.64     4.44   0.1824 -0.0107  0.025     1.0   0.0002
+s2_2024to2025            original 0.0345    0.4055    0.4256      -4.55     4.23   0.1721  0.0067  0.049     1.0   0.0078
+s2_2024to2025         posture eye 0.0340    0.4068    0.4255      -4.58     4.16   0.1836  0.0038  0.049     1.0   0.0066
+s0_2025to2024            original 0.0341    0.4048    0.4303      -6.22     5.71   0.1683 -0.0016  0.030     1.0   0.0022
+s0_2025to2024         posture eye 0.0337    0.4056    0.4307      -6.09     5.49   0.1692 -0.0050  0.025     1.0   0.0016
+s0_2024to2025 posture eye, lean 2 0.0328    0.4101    0.4245      -5.63     6.03   0.1860 -0.0015  0.040     1.0   0.0045
+
+rv_R2     posture minus original, mean over 4 runs: -0.0004 (range -0.0005 to -0.0003)
+chase_ll  posture minus original, mean over 4 runs: +0.0011 (range +0.0008 to +0.0013)
+whiff_ll  posture minus original, mean over 4 runs: +0.0002 (range -0.0002 to +0.0006)
+default   posture minus original, mean over 4 runs: +0.0071 (range -0.0005 to +0.0165)
+adjust    posture minus original, mean over 4 runs: -0.0027 (range -0.0049 to +0.0006)
+upper     posture minus original, mean over 4 runs: -0.0030 (range -0.0070 to +0.0000)
+two_pos   posture minus original, mean over 4 runs: -0.0004 (range -0.0012 to +0.0004)
+
+s0_2024to2025 posture-eye counterfactual:
+  eye -1 in: run value +0.0177/100 pitches (high pitches +0.1828, low -0.0375); chase -0.37 pp; whiff -0.76 pp
+  eye +1 in: run value -0.0126/100 pitches (high pitches -0.1611, low +0.0417); chase +0.34 pp; whiff +0.78 pp
+s1_2024to2025 posture-eye counterfactual:
+  eye -1 in: run value -0.0027/100 pitches (high pitches +0.1146, low -0.0445); chase -0.45 pp; whiff -0.69 pp
+  eye +1 in: run value +0.0059/100 pitches (high pitches -0.0975, low +0.0510); chase +0.42 pp; whiff +0.71 pp
+s2_2024to2025 posture-eye counterfactual:
+  eye -1 in: run value -0.0033/100 pitches (high pitches +0.1433, low -0.0610); chase -0.06 pp; whiff -0.47 pp
+  eye +1 in: run value +0.0078/100 pitches (high pitches -0.1273, low +0.0664); chase +0.04 pp; whiff +0.48 pp
+s0_2025to2024 posture-eye counterfactual:
+  eye -1 in: run value +0.0049/100 pitches (high pitches +0.1810, low -0.0690); chase -0.03 pp; whiff -0.46 pp
+  eye +1 in: run value +0.0005/100 pitches (high pitches -0.1620, low +0.0742); chase +0.00 pp; whiff +0.48 pp

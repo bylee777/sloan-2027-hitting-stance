@@ -1,0 +1,32 @@
+2024-25 hitter-months with posture + stance + outcomes: 3,397 (543 hitters)
+A. zone top: between-hitter SD 2.04 in; within-hitter month-to-month SD 0.54 in (zone bottom 0.33 in); share of hitter-months >= 1 in off the hitter's usual: 6.5%
+   within-hitter correlations of posture with the stance levers:
+        width  depth   off  angle
+   top  -0.45   0.33 -0.07  -0.01
+   bot  -0.28   0.36 -0.04   0.02
+   zone top (in) per 3 in wider / deeper / farther off / 10 deg closed: -0.36 (z -12.2), +0.34 (z +8.5), -0.08 (z -1.7), +0.20 (z +4.5)
+   between hitters, zone top as a share of height: median 0.568, 10th-90th pct 0.542-0.597
+
+B. WITHIN-HITTER MONTHLY PANEL 2024-25: stance levers without -> with posture controls; posture's own effects
+outcome                               3 in wider           3 in deeper   crouch: top 1 in lower   knees: bottom 1 in lower
+whiff % per swing           -0.41 ->  -0.37 (z -2.7)  -0.27 ->  -0.34 (z -1.7)       -0.01 (z -0.0)         -0.24 (z -0.8)
+strikeout % per PA          -0.30 ->  -0.22 (z -1.2)  -0.30 ->  -0.43 (z -1.9)       -0.11 (z -0.4)         -0.33 (z -0.9)
+chase %                     -0.22 ->  -0.25 (z -1.5)  -0.43 ->  -0.35 (z -1.5)       -0.04 (z -0.1)         +0.34 (z +1.0)
+expected HR per 600 PA      -0.52 ->  -0.51 (z -1.7)  +0.55 ->  +0.49 (z +0.8)       +0.04 (z +0.1)         -0.24 (z -0.3)
+barrels per 600 PA          -0.92 ->  -1.00 (z -2.0)  +0.77 ->  +0.70 (z +0.9)       +0.60 (z +0.7)         -1.06 (z -0.8)
+hard-hit % (95+ mph)        -0.54 ->  -0.47 (z -2.0)  +0.32 ->  +0.15 (z +0.4)       +0.06 (z +0.2)         -0.70 (z -1.3)
+exit velocity (mph)         -0.10 ->  -0.05 (z -0.7)  -0.03 ->  -0.08 (z -0.8)       -0.10 (z -0.8)         -0.06 (z -0.4)
+sweet-spot %                +0.25 ->  +0.16 (z +0.9)  +0.43 ->  +0.56 (z +2.1)       +0.11 (z +0.3)         +0.33 (z +0.7)
+xwOBA per PA (points)       -0.59 ->  -0.87 (z -0.7)  +3.25 ->  +3.08 (z +1.5)       +1.86 (z +0.8)         -3.03 (z -0.9)
+
+C. BETWEEN HITTERS, season level (2024-25, 250+ PA, 517 hitter-seasons): per 1 point of height LOWER zone top (more crouched),
+   with year FE, height, and the four stance levers as controls
+   whiff % per swing           -0.42 (z -4.0)
+   strikeout % per PA          -0.12 (z -0.8)
+   chase %                     -0.13 (z -1.0)
+   expected HR per 600 PA      -0.42 (z -2.2)
+   barrels per 600 PA          -0.74 (z -2.5)
+   hard-hit % (95+ mph)        -0.65 (z -4.1)
+   exit velocity (mph)         -0.18 (z -3.8)
+   sweet-spot %                +0.24 (z +0.9)
+   xwOBA per PA (points)       -0.96 (z -1.2)

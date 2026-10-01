@@ -1,0 +1,216 @@
+
+======================================================================================================================
+DESIGN B: after [0,59] minus baseline [-90,-31]; 150 changes with full windows (95 width, 26 depth, 29 angle); 14,064 control dates
+======================================================================================================================
+
+1. ACCURACY ON CONTROL DATES (truth observed): weighted MSE of after-minus-before, out of fold; ratio vs the paper's
+   matching (< 1 = better than matching); 90% interval of the ratio from a hitter-cluster bootstrap. 'slumping' = controls
+   whose run-up xwOBA slump is in the worst quarter (the changers' region).
+   outcome    model     zero   drift  match20   ridge     gbm | gbm/match [90%]      | slumping: gbm/match [90%]     | gbm config
+   whiff                16.9    17.0     13.8    11.1    10.9 | 0.790 [0.760, 0.820] | 0.820 [0.775, 0.865]        | #3 ridge a=1000
+   chase                22.3    21.9     23.4    12.3    12.9 | 0.554 [0.526, 0.584] | 0.539 [0.493, 0.587]        | #2 ridge a=1
+   sweet                51.1    51.5     49.8    23.4    23.5 | 0.471 [0.443, 0.501] | 0.447 [0.412, 0.485]        | #2 ridge a=100
+   K                    29.0    28.9     26.4    18.1    18.1 | 0.684 [0.653, 0.715] | 0.716 [0.663, 0.777]        | #3 ridge a=1000
+   xwoba              2471.7  2390.4   1513.9  1201.6  1114.3 | 0.736 [0.708, 0.766] | 0.762 [0.712, 0.818]        | #2 ridge a=1000
+   bat_speed             0.8     0.8      0.9     0.5     0.5 | 0.613 [0.588, 0.642] | 0.653 [0.610, 0.700]        | #1 ridge a=1
+
+2. BALANCE: standardized mean difference, changers minus comparison (control SD units); |SMD| > 0.1 = imbalance
+   feature         vs all controls  vs matched 20   (matched on slump_xw, slump_wh, xwoba_B)
+   xwoba_B                   -0.41          -0.02
+   slump_xw                  -0.10          -0.08
+   whiff_B                   +0.24          +0.37
+   slump_wh                  +0.07          -0.01
+   chase_B                   +0.28          +0.16
+   slump_chase               +0.03          +0.03
+   sweet_B                   -0.26          -0.06
+   slump_sweet               +0.05          +0.04
+   K_B                       +0.22          +0.27
+   bat_speed_B               +0.16          +0.35
+   xwoba_prev                -0.25          -0.03
+   chase_prev                +0.31          +0.21
+   sweet_prev                -0.49          -0.45
+   PA_U                      -0.08          +0.13
+   age                       -0.44          -0.42
+   doy                       +0.97          +0.57
+
+3. EFFECT BY LEVER (all its changes): mean effect (SE) under each counterfactual; dr = doubly robust (cluster-bootstrap SE); ESS = effective number of weighted controls
+   group           outcome     n |   naive   match20 (paper)       bias-corr           ridge             gbm              dr | cf match / gbm | ESS
+   width           xwoba      83 |   +7.29    +10.88 ( 3.80)   +7.65 ( 3.67)   +0.73 ( 3.95)   +5.71 ( 3.37)   +9.04 ( 3.92) |  -3.59 /  +1.57 |  2880
+   width           whiff      83 |   -0.18     -0.85 ( 0.43)   -0.90 ( 0.40)   -1.78 ( 0.46)   -0.81 ( 0.41)   -0.99 ( 0.45) |  +0.67 /  +0.63 |  2880
+   width           chase      83 |   -0.19     -0.77 ( 0.56)   -0.15 ( 0.52)   -1.48 ( 0.68)   -0.28 ( 0.52)   -0.05 ( 0.52) |  +0.58 /  +0.09 |  2880
+   width           sweet      83 |   +1.87     +0.99 ( 0.78)   +0.36 ( 0.64)   -1.90 ( 0.86)   +0.30 ( 0.59)   +0.57 ( 0.65) |  +0.87 /  +1.57 |  2880
+   width           K          83 |   -0.45     -1.21 ( 0.56)   -1.03 ( 0.51)   -0.85 ( 0.48)   -0.81 ( 0.52)   -1.26 ( 0.62) |  +0.75 /  +0.35 |  2880
+   width           bat_speed  83 |   +0.28     +0.09 ( 0.11)   +0.12 ( 0.09)   +0.71 ( 0.19)   +0.10 ( 0.09)   +0.12 ( 0.10) |  +0.18 /  +0.18 |  2880
+   depth           xwoba      23 |  +31.90    +11.89 (10.51)  +15.03 ( 9.86)  +14.30 ( 8.86)  +15.49 ( 9.12)  +18.07 ( 9.21) | +20.01 / +16.42 |  3811
+   depth           whiff      23 |   -2.17     -1.14 ( 0.78)   -0.39 ( 0.84)   -1.69 ( 0.92)   -0.76 ( 0.84)   -0.56 ( 0.84) |  -1.03 /  -1.41 |  3811
+   depth           chase      23 |   -0.63     -0.78 ( 1.26)   -0.71 ( 1.02)   -1.50 ( 1.21)   -0.75 ( 0.99)   -0.89 ( 1.00) |  +0.16 /  +0.13 |  3811
+   depth           sweet      23 |   +3.45     +0.36 ( 1.76)   +0.60 ( 1.56)   -0.38 ( 1.85)   +1.14 ( 1.46)   +1.35 ( 1.50) |  +3.09 /  +2.31 |  3811
+   depth           K          23 |   -2.21     -0.22 ( 1.16)   -0.34 ( 1.21)   -1.42 ( 1.01)   -1.00 ( 1.15)   -1.11 ( 1.12) |  -1.99 /  -1.21 |  3811
+   depth           bat_speed  23 |   -0.00     -0.14 ( 0.22)   -0.10 ( 0.21)   +0.15 ( 0.33)   -0.18 ( 0.18)   -0.17 ( 0.19) |  +0.14 /  +0.18 |  3811
+   angle           xwoba      29 |   -7.25     -1.61 ( 9.88)   -4.38 ( 9.01)   -4.71 ( 7.94)   -3.79 ( 8.63)   -3.92 ( 8.73) |  -5.63 /  -3.45 | 10958
+   angle           whiff      29 |   +0.38     -0.08 ( 0.78)   -0.12 ( 0.77)   +0.34 ( 0.74)   -0.03 ( 0.72)   +0.04 ( 0.72) |  +0.46 /  +0.41 | 10958
+   angle           chase      29 |   +2.69     +2.04 ( 0.92)   +1.36 ( 0.88)   +1.45 ( 0.91)   +1.23 ( 0.84)   +1.28 ( 0.83) |  +0.65 /  +1.45 | 10958
+   angle           sweet      29 |   -1.14     -1.42 ( 1.40)   -0.53 ( 1.19)   -0.32 ( 1.16)   -0.59 ( 1.11)   -0.52 ( 1.16) |  +0.28 /  -0.55 | 10958
+   angle           K          29 |   +1.40     +0.98 ( 1.15)   +1.09 ( 1.02)   +1.11 ( 0.89)   +0.90 ( 0.98)   +0.84 ( 1.05) |  +0.42 /  +0.51 | 10958
+   angle           bat_speed  29 |   +0.21     -0.06 ( 0.18)   -0.11 ( 0.15)   -0.03 ( 0.19)   -0.11 ( 0.15)   -0.09 ( 0.15) |  +0.27 /  +0.31 | 10958
+
+   reproduction: 150 of 150 paper changes matched; max |y_nn - paper y| = 0.00e+00
+
+3b. BAYESIAN MODEL (paper Table 3/4) REFIT ON EACH COUNTERFACTUAL: posterior mean [90% interval]; * = excludes 0
+   cell                                        match20 (paper)           bias-corrected                    ridge                      gbm
+   sweet: per 3 in DEEPER               +1.55 [ +0.40, +2.67]*   +1.36 [ +0.24, +2.49]*   +1.97 [ +0.74, +3.21]*   +1.28 [ +0.18, +2.37]*
+   xwoba: after-slump: width           +13.67 [ +5.16,+22.19]*   +9.46 [ +1.14,+18.03]*   +0.36 [ -7.60, +8.33]    +7.85 [ -0.04,+15.91] 
+   xwoba: after-slump: depth           +18.09 [ +2.25,+33.73]*  +17.03 [ +1.60,+32.96]*  +14.02 [ -1.03,+28.96]   +15.50 [ +0.43,+30.29]*
+   K: after-slump: width                -1.12 [ -2.07, -0.16]*   -0.96 [ -1.92, -0.01]*   -0.80 [ -1.70, +0.10]    -0.60 [ -1.51, +0.30] 
+   chase: after-slump: angle            +1.88 [ +0.52, +3.22]*   +1.22 [ -0.12, +2.48]    +1.26 [ -0.63, +3.03]    +1.06 [ -0.22, +2.28] 
+   chase: per 3 in DEEPER               -0.49 [ -1.20, +0.21]    -0.24 [ -0.93, +0.45]    +0.37 [ -0.59, +1.33]    -0.42 [ -1.07, +0.23] 
+   whiff: per 3 in WIDER                -0.25 [ -0.74, +0.25]    -0.42 [ -0.90, +0.07]    -0.30 [ -0.84, +0.24]    -0.49 [ -0.96, -0.04]*
+   xwoba: per 3 in DEEPER               +5.56 [ -1.44,+12.58]    +5.26 [ -1.55,+12.34]    +5.87 [ -1.06,+12.59]    +5.07 [ -1.59,+11.96] 
+   tau (xwOBA / sweet / chase)                7.18 / 1.46 / 2.28         5.35 / 0.90 / 1.89         5.25 / 4.02 / 5.11         4.62 / 0.79 / 1.37
+
+   full 7-term posterior for each counterfactual (all outcomes):
+   nn     whiff     tau  0.98 | after-slump: width -0.61 [-1.34,+0.12] | after-slump: depth -1.09 [-2.49,+0.29] | after-slump: angle -0.30 [-1.46,+0.84] | per 3 in WIDER -0.25 [-0.74,+0.25] | wider x chase-prone -0.13 [-0.83,+0.55] | per 3 in DEEPER -0.10 [-0.70,+0.50] | per 10 deg CLOSED -0.15 [-0.89,+0.58]
+   nn     chase     tau  2.28 | after-slump: width -0.83 [-1.71,+0.02] | after-slump: depth -0.56 [-2.17,+1.06] | after-slump: angle +1.88 [+0.52,+3.22] | per 3 in WIDER +0.23 [-0.34,+0.80] | wider x chase-prone +0.62 [-0.20,+1.43] | per 3 in DEEPER -0.49 [-1.20,+0.21] | per 10 deg CLOSED -0.10 [-0.96,+0.79]
+   nn     sweet     tau  1.46 | after-slump: width +1.14 [-0.22,+2.50] | after-slump: depth +0.69 [-1.83,+3.21] | after-slump: angle -1.39 [-3.52,+0.65] | per 3 in WIDER +0.67 [-0.23,+1.60] | wider x chase-prone -0.24 [-1.51,+1.04] | per 3 in DEEPER +1.55 [+0.40,+2.67] | per 10 deg CLOSED +0.62 [-0.71,+1.96]
+   nn     K         tau  1.06 | after-slump: width -1.12 [-2.07,-0.16] | after-slump: depth -0.83 [-2.59,+0.96] | after-slump: angle +0.41 [-1.10,+1.88] | per 3 in WIDER +0.21 [-0.43,+0.86] | wider x chase-prone -0.94 [-1.86,-0.05] | per 3 in DEEPER +0.41 [-0.39,+1.21] | per 10 deg CLOSED -0.54 [-1.51,+0.40]
+   nn     xwoba     tau  7.18 | after-slump: width +13.67 [+5.16,+22.19] | after-slump: depth +18.09 [+2.25,+33.73] | after-slump: angle -0.65 [-14.03,+12.17] | per 3 in WIDER -0.86 [-6.46,+4.84] | wider x chase-prone -0.68 [-8.81,+7.24] | per 3 in DEEPER +5.56 [-1.44,+12.58] | per 10 deg CLOSED -2.91 [-11.36,+5.32]
+   nn     bat_speed tau  0.85 | after-slump: width +0.10 [-0.08,+0.28] | after-slump: depth -0.10 [-0.44,+0.24] | after-slump: angle -0.08 [-0.38,+0.21] | per 3 in WIDER -0.04 [-0.16,+0.08] | wider x chase-prone -0.02 [-0.19,+0.15] | per 3 in DEEPER +0.10 [-0.04,+0.25] | per 10 deg CLOSED +0.13 [-0.06,+0.31]
+   bc     whiff     tau  0.91 | after-slump: width -0.64 [-1.36,+0.10] | after-slump: depth -0.38 [-1.77,+0.98] | after-slump: angle -0.35 [-1.51,+0.77] | per 3 in WIDER -0.42 [-0.90,+0.07] | wider x chase-prone +0.08 [-0.60,+0.76] | per 3 in DEEPER -0.26 [-0.85,+0.35] | per 10 deg CLOSED +0.06 [-0.67,+0.78]
+   bc     chase     tau  1.89 | after-slump: width -0.17 [-1.01,+0.65] | after-slump: depth -0.56 [-2.14,+0.99] | after-slump: angle +1.22 [-0.12,+2.48] | per 3 in WIDER -0.25 [-0.80,+0.28] | wider x chase-prone +0.85 [+0.04,+1.63] | per 3 in DEEPER -0.24 [-0.93,+0.45] | per 10 deg CLOSED -0.20 [-1.04,+0.65]
+   bc     sweet     tau  0.90 | after-slump: width +0.41 [-0.90,+1.75] | after-slump: depth +0.65 [-1.84,+3.12] | after-slump: angle -0.46 [-2.54,+1.55] | per 3 in WIDER +0.41 [-0.46,+1.31] | wider x chase-prone -0.51 [-1.81,+0.76] | per 3 in DEEPER +1.36 [+0.24,+2.49] | per 10 deg CLOSED +0.35 [-0.95,+1.67]
+   bc     K         tau  0.85 | after-slump: width -0.96 [-1.92,-0.01] | after-slump: depth -0.78 [-2.53,+0.99] | after-slump: angle +0.67 [-0.83,+2.11] | per 3 in WIDER +0.02 [-0.61,+0.66] | wider x chase-prone -0.62 [-1.53,+0.29] | per 3 in DEEPER +0.29 [-0.50,+1.08] | per 10 deg CLOSED -0.19 [-1.16,+0.74]
+   bc     xwoba     tau  5.35 | after-slump: width +9.46 [+1.14,+18.03] | after-slump: depth +17.03 [+1.60,+32.96] | after-slump: angle -3.32 [-16.46,+9.35] | per 3 in WIDER -2.72 [-8.26,+2.81] | wider x chase-prone -0.17 [-8.17,+7.65] | per 3 in DEEPER +5.26 [-1.55,+12.34] | per 10 deg CLOSED -4.15 [-12.64,+3.91]
+   bc     bat_speed tau  0.71 | after-slump: width +0.13 [-0.03,+0.28] | after-slump: depth -0.08 [-0.38,+0.22] | after-slump: angle -0.14 [-0.40,+0.11] | per 3 in WIDER -0.02 [-0.12,+0.08] | wider x chase-prone -0.01 [-0.16,+0.14] | per 3 in DEEPER +0.10 [-0.03,+0.22] | per 10 deg CLOSED +0.13 [-0.03,+0.30]
+   ridge  whiff     tau  2.58 | after-slump: width -2.41 [-3.23,-1.61] | after-slump: depth -1.94 [-3.44,-0.40] | after-slump: angle +0.16 [-1.22,+1.47] | per 3 in WIDER -0.30 [-0.84,+0.24] | wider x chase-prone +0.37 [-0.40,+1.14] | per 3 in DEEPER +0.23 [-0.47,+0.90] | per 10 deg CLOSED +0.31 [-0.54,+1.18]
+   ridge  chase     tau  5.11 | after-slump: width -2.90 [-4.03,-1.78] | after-slump: depth -2.27 [-4.33,-0.28] | after-slump: angle +1.26 [-0.63,+3.03] | per 3 in WIDER +0.27 [-0.46,+1.00] | wider x chase-prone +1.04 [-0.04,+2.10] | per 3 in DEEPER +0.37 [-0.59,+1.33] | per 10 deg CLOSED -0.32 [-1.56,+0.89]
+   ridge  sweet     tau  4.02 | after-slump: width -3.46 [-4.90,-2.02] | after-slump: depth -1.37 [-4.06,+1.32] | after-slump: angle -0.38 [-2.80,+1.92] | per 3 in WIDER +0.30 [-0.68,+1.28] | wider x chase-prone +0.44 [-0.93,+1.83] | per 3 in DEEPER +1.97 [+0.74,+3.21] | per 10 deg CLOSED -0.03 [-1.57,+1.48]
+   ridge  K         tau  0.66 | after-slump: width -0.80 [-1.70,+0.10] | after-slump: depth -1.70 [-3.38,-0.02] | after-slump: angle +0.74 [-0.75,+2.17] | per 3 in WIDER -0.12 [-0.71,+0.48] | wider x chase-prone -0.26 [-1.11,+0.61] | per 3 in DEEPER +0.38 [-0.38,+1.16] | per 10 deg CLOSED +0.13 [-0.83,+1.07]
+   ridge  xwoba     tau  5.25 | after-slump: width +0.36 [-7.60,+8.33] | after-slump: depth +14.02 [-1.03,+28.96] | after-slump: angle -3.65 [-16.92,+9.06] | per 3 in WIDER -1.61 [-6.83,+3.65] | wider x chase-prone -1.56 [-9.15,+6.12] | per 3 in DEEPER +5.87 [-1.06,+12.59] | per 10 deg CLOSED -7.09 [-15.55,+1.22]
+   ridge  bat_speed tau  1.77 | after-slump: width +1.14 [+0.83,+1.44] | after-slump: depth +0.51 [-0.06,+1.08] | after-slump: angle -0.03 [-0.56,+0.49] | per 3 in WIDER -0.02 [-0.23,+0.19] | wider x chase-prone -0.30 [-0.60,+0.00] | per 3 in DEEPER -0.21 [-0.47,+0.05] | per 10 deg CLOSED +0.05 [-0.29,+0.38]
+   gbm    whiff     tau  0.87 | after-slump: width -0.43 [-1.11,+0.26] | after-slump: depth -0.37 [-1.72,+0.91] | after-slump: angle -0.19 [-1.35,+0.93] | per 3 in WIDER -0.49 [-0.96,-0.04] | wider x chase-prone +0.17 [-0.49,+0.84] | per 3 in DEEPER -0.17 [-0.76,+0.41] | per 10 deg CLOSED +0.13 [-0.60,+0.85]
+   gbm    chase     tau  1.37 | after-slump: width -0.15 [-0.91,+0.60] | after-slump: depth -0.39 [-1.85,+1.03] | after-slump: angle +1.06 [-0.22,+2.28] | per 3 in WIDER -0.25 [-0.75,+0.25] | wider x chase-prone +0.67 [-0.06,+1.40] | per 3 in DEEPER -0.42 [-1.07,+0.23] | per 10 deg CLOSED -0.30 [-1.11,+0.51]
+   gbm    sweet     tau  0.79 | after-slump: width +0.21 [-1.07,+1.45] | after-slump: depth +1.25 [-1.14,+3.63] | after-slump: angle -0.45 [-2.56,+1.56] | per 3 in WIDER +0.32 [-0.52,+1.18] | wider x chase-prone -0.35 [-1.56,+0.87] | per 3 in DEEPER +1.28 [+0.18,+2.37] | per 10 deg CLOSED +0.03 [-1.27,+1.33]
+   gbm    K         tau  0.84 | after-slump: width -0.60 [-1.51,+0.30] | after-slump: depth -1.05 [-2.73,+0.65] | after-slump: angle +0.62 [-0.89,+2.07] | per 3 in WIDER -0.20 [-0.80,+0.40] | wider x chase-prone -0.18 [-1.04,+0.70] | per 3 in DEEPER +0.16 [-0.60,+0.94] | per 10 deg CLOSED +0.02 [-0.92,+0.98]
+   gbm    xwoba     tau  4.62 | after-slump: width +7.85 [-0.04,+15.91] | after-slump: depth +15.50 [+0.43,+30.29] | after-slump: angle -2.21 [-15.38,+10.53] | per 3 in WIDER -1.54 [-6.79,+3.66] | wider x chase-prone -0.39 [-7.98,+7.26] | per 3 in DEEPER +5.07 [-1.59,+11.96] | per 10 deg CLOSED -5.74 [-14.19,+2.59]
+   gbm    bat_speed tau  0.67 | after-slump: width +0.06 [-0.09,+0.20] | after-slump: depth -0.18 [-0.45,+0.10] | after-slump: angle -0.14 [-0.38,+0.11] | per 3 in WIDER -0.04 [-0.13,+0.06] | wider x chase-prone +0.01 [-0.13,+0.14] | per 3 in DEEPER +0.07 [-0.05,+0.19] | per 10 deg CLOSED +0.13 [-0.03,+0.28]
+
+3c. VALIDATION 2024-25 -> 2026 on each counterfactual (full minus refit no-effect | full minus refit intercept-only)
+   outcome       match20 (paper)     bias-corrected              ridge                gbm   n test
+   whiff          -1.63 |  -2.61     -2.65 |  -3.38     +4.49 |  -1.01     -3.09 |  -2.56   48
+   chase          +1.89 |  +2.09     -4.01 |  -0.35     +3.84 |  +0.60     -4.13 |  -1.98   48
+   sweet          -0.70 |  -0.57     -0.84 |  -0.40     -6.28 |  -3.08     -0.94 |  -0.47   48
+   K              -0.54 |  -0.89     -1.05 |  -1.02     +0.17 |  -0.87     -2.29 |  -2.72   48
+   xwoba          -0.14 |  -0.39     +0.13 |  +0.17     -1.56 |  +0.21     +0.26 |  +0.27   48
+   bat_speed      -2.72 |  -1.67     -2.94 |  -1.10     +1.79 |  -1.28     -2.17 |  -0.77   48
+
+3d. SAME, WITH EACH METHOD'S NOISE MEASURED ON THE CONTROLS: residual^2 = a*u/n_before + b*u/n_after + c fitted on
+    control dates (u = unit variance; paper assumes a = b = 1.05, c = 0); v_i from the fit. Coefficients (a, b, c):
+    whiff      nn (0.35, 1.22, 3.57)   gbm (0.15, 1.15, 2.72)   bc (0.14, 1.17, 3.72)
+    chase      nn (1.29, 0.85, 6.12)   gbm (0.28, 1.27, 1.83)   bc (0.29, 1.25, 3.19)
+    sweet      nn (0.70, 1.51, 0.00)   gbm (0.01, 1.09, 0.26)   bc (0.01, 1.11, 2.52)
+    K          nn (0.67, 1.37, 1.93)   gbm (0.07, 1.25, 3.55)   bc (0.07, 1.24, 5.42)
+    xwoba      nn (0.08, 0.95, 622.28)   gbm (0.03, 0.92, 302.58)   bc (0.01, 0.88, 470.00)
+    bat_speed  nn (1.84, 1.59, 0.49)   gbm (0.41, 2.07, 0.30)   bc (0.46, 2.01, 0.36)
+   cell                                        match20 (paper)           bias-corrected                      gbm
+   sweet: per 3 in DEEPER               +1.57 [ +0.47, +2.71]*   +1.35 [ +0.49, +2.20]*   +1.24 [ +0.44, +2.06]*
+   xwoba: after-slump: width           +12.99 [ +5.36,+20.97]*   +9.47 [ +2.37,+16.74]*   +7.89 [ +1.51,+14.26]*
+   xwoba: after-slump: depth           +15.27 [ +1.15,+29.25]*  +16.41 [ +3.41,+29.35]*  +16.62 [ +4.57,+28.34]*
+   K: after-slump: width                -1.10 [ -2.07, -0.12]*   -0.96 [ -1.85, -0.09]*   -0.64 [ -1.45, +0.17] 
+   chase: after-slump: angle            +1.84 [ +0.39, +3.24]*   +1.26 [ -0.09, +2.56]    +1.16 [ -0.11, +2.42] 
+   chase: per 3 in DEEPER               -0.47 [ -1.21, +0.30]    -0.27 [ -0.97, +0.41]    -0.43 [ -1.09, +0.20] 
+   whiff: per 3 in WIDER                -0.25 [ -0.72, +0.23]    -0.38 [ -0.83, +0.07]    -0.46 [ -0.88, -0.03]*
+   xwoba: per 3 in DEEPER               +6.53 [ +0.31,+12.67]*   +6.22 [ +0.60,+11.92]*   +5.30 [ +0.24,+10.70]*
+   tau (xwOBA / sweet / chase)               11.96 / 1.35 / 0.93        13.02 / 2.20 / 2.54        10.95 / 2.30 / 2.42
+
+   full 7-term posterior, calibrated variances:
+   nn     whiff     tau  0.91 | after-slump: width -0.69 [-1.41,+0.04] | after-slump: depth -0.99 [-2.31,+0.37] | after-slump: angle -0.21 [-1.37,+0.90] | per 3 in WIDER -0.25 [-0.72,+0.23] | wider x chase-prone -0.15 [-0.84,+0.52] | per 3 in DEEPER -0.17 [-0.75,+0.42] | per 10 deg CLOSED -0.15 [-0.85,+0.56]
+   nn     chase     tau  0.93 | after-slump: width -0.76 [-1.67,+0.15] | after-slump: depth -0.56 [-2.25,+1.15] | after-slump: angle +1.84 [+0.39,+3.24] | per 3 in WIDER +0.24 [-0.35,+0.84] | wider x chase-prone +0.60 [-0.27,+1.45] | per 3 in DEEPER -0.47 [-1.21,+0.30] | per 10 deg CLOSED -0.12 [-1.04,+0.83]
+   nn     sweet     tau  1.35 | after-slump: width +1.15 [-0.22,+2.54] | after-slump: depth +0.90 [-1.62,+3.39] | after-slump: angle -1.40 [-3.43,+0.70] | per 3 in WIDER +0.67 [-0.22,+1.59] | wider x chase-prone -0.28 [-1.56,+1.04] | per 3 in DEEPER +1.57 [+0.47,+2.71] | per 10 deg CLOSED +0.64 [-0.69,+1.98]
+   nn     K         tau  0.92 | after-slump: width -1.10 [-2.07,-0.12] | after-slump: depth -0.73 [-2.49,+1.05] | after-slump: angle +0.43 [-1.10,+1.90] | per 3 in WIDER +0.24 [-0.42,+0.88] | wider x chase-prone -1.01 [-1.93,-0.10] | per 3 in DEEPER +0.37 [-0.41,+1.18] | per 10 deg CLOSED -0.58 [-1.53,+0.37]
+   nn     xwoba     tau 11.96 | after-slump: width +12.99 [+5.36,+20.97] | after-slump: depth +15.27 [+1.15,+29.25] | after-slump: angle +0.82 [-11.41,+12.57] | per 3 in WIDER -1.22 [-6.31,+3.93] | wider x chase-prone +0.71 [-6.70,+8.04] | per 3 in DEEPER +6.53 [+0.31,+12.67] | per 10 deg CLOSED -0.83 [-8.49,+6.66]
+   nn     bat_speed tau  0.25 | after-slump: width +0.10 [-0.08,+0.28] | after-slump: depth -0.09 [-0.43,+0.26] | after-slump: angle -0.10 [-0.39,+0.19] | per 3 in WIDER -0.04 [-0.15,+0.08] | wider x chase-prone -0.02 [-0.20,+0.15] | per 3 in DEEPER +0.10 [-0.05,+0.24] | per 10 deg CLOSED +0.12 [-0.06,+0.31]
+   bc     whiff     tau  1.07 | after-slump: width -0.73 [-1.42,-0.04] | after-slump: depth -0.26 [-1.53,+1.01] | after-slump: angle -0.24 [-1.32,+0.81] | per 3 in WIDER -0.38 [-0.83,+0.07] | wider x chase-prone +0.03 [-0.62,+0.68] | per 3 in DEEPER -0.36 [-0.92,+0.18] | per 10 deg CLOSED +0.03 [-0.65,+0.69]
+   bc     chase     tau  2.54 | after-slump: width -0.26 [-1.11,+0.58] | after-slump: depth -0.54 [-2.12,+1.01] | after-slump: angle +1.26 [-0.09,+2.56] | per 3 in WIDER -0.28 [-0.84,+0.29] | wider x chase-prone +0.90 [+0.09,+1.70] | per 3 in DEEPER -0.27 [-0.97,+0.41] | per 10 deg CLOSED -0.35 [-1.20,+0.54]
+   bc     sweet     tau  2.20 | after-slump: width +0.32 [-0.73,+1.41] | after-slump: depth +1.20 [-0.72,+3.14] | after-slump: angle -0.63 [-2.26,+0.95] | per 3 in WIDER +0.40 [-0.31,+1.11] | wider x chase-prone -0.44 [-1.44,+0.57] | per 3 in DEEPER +1.35 [+0.49,+2.20] | per 10 deg CLOSED +0.28 [-0.73,+1.30]
+   bc     K         tau  1.13 | after-slump: width -0.96 [-1.85,-0.09] | after-slump: depth -0.49 [-2.07,+1.08] | after-slump: angle +0.67 [-0.67,+1.99] | per 3 in WIDER +0.07 [-0.51,+0.64] | wider x chase-prone -0.74 [-1.55,+0.09] | per 3 in DEEPER +0.19 [-0.51,+0.89] | per 10 deg CLOSED -0.27 [-1.13,+0.56]
+   bc     xwoba     tau 13.02 | after-slump: width +9.47 [+2.37,+16.74] | after-slump: depth +16.41 [+3.41,+29.35] | after-slump: angle -1.62 [-12.77,+9.30] | per 3 in WIDER -2.65 [-7.45,+2.03] | wider x chase-prone +1.07 [-5.64,+7.84] | per 3 in DEEPER +6.22 [+0.60,+11.92] | per 10 deg CLOSED -2.17 [-9.16,+4.77]
+   bc     bat_speed tau  0.31 | after-slump: width +0.12 [-0.03,+0.28] | after-slump: depth -0.09 [-0.38,+0.20] | after-slump: angle -0.14 [-0.39,+0.11] | per 3 in WIDER -0.02 [-0.12,+0.09] | wider x chase-prone -0.01 [-0.16,+0.13] | per 3 in DEEPER +0.09 [-0.03,+0.22] | per 10 deg CLOSED +0.14 [-0.02,+0.30]
+   gbm    whiff     tau  1.33 | after-slump: width -0.49 [-1.13,+0.15] | after-slump: depth -0.37 [-1.58,+0.83] | after-slump: angle -0.15 [-1.21,+0.87] | per 3 in WIDER -0.46 [-0.88,-0.03] | wider x chase-prone +0.13 [-0.47,+0.75] | per 3 in DEEPER -0.26 [-0.80,+0.27] | per 10 deg CLOSED +0.14 [-0.52,+0.82]
+   gbm    chase     tau  2.42 | after-slump: width -0.26 [-1.04,+0.51] | after-slump: depth -0.42 [-1.86,+1.02] | after-slump: angle +1.16 [-0.11,+2.42] | per 3 in WIDER -0.27 [-0.79,+0.24] | wider x chase-prone +0.72 [-0.03,+1.46] | per 3 in DEEPER -0.43 [-1.09,+0.20] | per 10 deg CLOSED -0.46 [-1.28,+0.36]
+   gbm    sweet     tau  2.30 | after-slump: width +0.20 [-0.79,+1.21] | after-slump: depth +1.81 [-0.01,+3.63] | after-slump: angle -0.59 [-2.18,+0.90] | per 3 in WIDER +0.27 [-0.39,+0.91] | wider x chase-prone -0.28 [-1.20,+0.67] | per 3 in DEEPER +1.24 [+0.44,+2.06] | per 10 deg CLOSED -0.05 [-1.02,+0.92]
+   gbm    K         tau  1.50 | after-slump: width -0.64 [-1.45,+0.17] | after-slump: depth -0.93 [-2.42,+0.57] | after-slump: angle +0.52 [-0.82,+1.79] | per 3 in WIDER -0.13 [-0.68,+0.42] | wider x chase-prone -0.31 [-1.10,+0.46] | per 3 in DEEPER +0.10 [-0.58,+0.76] | per 10 deg CLOSED -0.06 [-0.89,+0.79]
+   gbm    xwoba     tau 10.95 | after-slump: width +7.89 [+1.51,+14.26] | after-slump: depth +16.62 [+4.57,+28.34] | after-slump: angle -0.87 [-11.27,+9.30] | per 3 in WIDER -1.55 [-5.91,+2.72] | wider x chase-prone +0.05 [-6.08,+6.08] | per 3 in DEEPER +5.30 [+0.24,+10.70] | per 10 deg CLOSED -3.94 [-10.38,+2.71]
+   gbm    bat_speed tau  0.31 | after-slump: width +0.06 [-0.08,+0.20] | after-slump: depth -0.18 [-0.45,+0.09] | after-slump: angle -0.14 [-0.38,+0.10] | per 3 in WIDER -0.03 [-0.13,+0.06] | wider x chase-prone +0.01 [-0.13,+0.14] | per 3 in DEEPER +0.07 [-0.05,+0.18] | per 10 deg CLOSED +0.14 [-0.01,+0.29]
+
+3e. VALIDATION with calibrated variances (full minus refit no-effect | full minus refit intercept-only)
+   outcome       match20 (paper)     bias-corrected                gbm   n test
+   whiff          -1.62 |  -2.77     -2.45 |  -3.59     -2.73 |  -2.50   48
+   chase          +1.54 |  +1.41     -3.90 |  +0.16     -3.99 |  -1.61   48
+   sweet          -0.73 |  -0.54     -1.43 |  -1.02     -1.56 |  -1.19   48
+   K              -0.42 |  -0.76     -0.25 |  -0.56     -1.98 |  -2.84   48
+   xwoba          +0.57 |  -0.60     +0.40 |  -0.43     +0.90 |  +0.01   48
+   bat_speed      -2.58 |  -1.57     -3.14 |  -1.24     -2.39 |  -0.90   48
+
+======================================================================================================================
+DESIGN U: after [0,59] minus run-up [-30,-1]; 121 changes with full windows (95 width, 26 depth, 0 angle); 6,083 control dates
+======================================================================================================================
+
+1. ACCURACY ON CONTROL DATES (truth observed): weighted MSE of after-minus-before, out of fold; ratio vs the paper's
+   matching (< 1 = better than matching); 90% interval of the ratio from a hitter-cluster bootstrap. 'slumping' = controls
+   whose run-up xwOBA slump is in the worst quarter (the changers' region).
+   outcome    model     zero   drift  match20   ridge     gbm | gbm/match [90%]      | slumping: gbm/match [90%]     | gbm config
+   whiff                19.6    19.6     12.6     8.7     8.8 | 0.698 [0.667, 0.730] | 0.696 [0.647, 0.749]        | #2 ridge a=100
+   chase                23.1    23.3     23.6    12.2    12.6 | 0.532 [0.492, 0.575] | 0.552 [0.499, 0.612]        | #2 ridge a=1
+   sweet                63.0    63.4     61.0    23.5    24.8 | 0.407 [0.375, 0.444] | 0.385 [0.339, 0.438]        | #2 ridge a=100
+   K                    34.3    34.5     30.8    12.0    12.2 | 0.396 [0.369, 0.428] | 0.363 [0.324, 0.410]        | #2 ridge a=1
+   xwoba              2615.3  2623.0   1533.4  1104.5  1146.1 | 0.747 [0.704, 0.792] | 0.753 [0.690, 0.820]        | #2 ridge a=100
+   bat_speed             0.6     0.6      0.7     0.5     0.5 | 0.681 [0.640, 0.724] | 0.660 [0.601, 0.725]        | #2 ridge a=100
+
+2. BALANCE: standardized mean difference, changers minus comparison (control SD units); |SMD| > 0.1 = imbalance
+   feature         vs all controls  vs matched 20   (matched on slump_xw, slump_wh, xwoba_B)
+   xwoba_B                   -0.46          -0.07
+   slump_xw                  -0.15          -0.11
+   whiff_B                   +0.34          +0.47
+   slump_wh                  +0.04          +0.00
+   chase_B                   +0.33          +0.19
+   slump_chase               -0.00          +0.00
+   sweet_B                   -0.37          -0.20
+   slump_sweet               +0.09          +0.11
+   K_B                       +0.31          +0.34
+   bat_speed_B               +0.11          +0.31
+   xwoba_prev                -0.33          -0.17
+   chase_prev                +0.24          +0.19
+   sweet_prev                -0.44          -0.49
+   PA_U                      +0.00          +0.13
+   age                       -0.46          -0.49
+   doy                       +0.34          +0.40
+
+4. EFFECT BY KIND (Figure 3 cells): mean effect (SE) under each counterfactual; dr = doubly robust (cluster-bootstrap SE); ESS = effective number of weighted controls
+   group           outcome     n |   naive   match20 (paper)       bias-corr           ridge             gbm              dr | cf match / gbm | ESS
+   width:WIDER     xwoba      47 |  +30.03    +16.12 ( 4.97)  +11.54 ( 5.06)  -38.47 (18.01)  +11.45 ( 4.92)  +10.79 ( 5.11) | +13.91 / +18.58 |  1691
+   width:WIDER     whiff      47 |   -1.69     -1.66 ( 0.70)   -1.55 ( 0.67)   +7.13 ( 3.24)   -1.42 ( 0.69)   -1.63 ( 0.72) |  -0.04 /  -0.27 |  1691
+   width:WIDER     chase      47 |   -0.71     -0.25 ( 0.77)   -0.29 ( 0.61)   +2.61 ( 1.36)   -0.18 ( 0.61)   -0.14 ( 0.65) |  -0.46 /  -0.53 |  1691
+   width:WIDER     sweet      47 |   +3.81     +2.26 ( 1.39)   +1.96 ( 0.94)   +9.30 ( 2.53)   +2.14 ( 0.85)   +1.96 ( 0.90) |  +1.55 /  +1.68 |  1691
+   width:WIDER     K          47 |   -1.26     -0.65 ( 0.75)   -0.55 ( 0.86)  +13.72 ( 5.04)   -0.44 ( 0.86)   -0.54 ( 0.90) |  -0.61 /  -0.82 |  1691
+   width:WIDER     bat_speed  47 |   +0.14     +0.21 ( 0.15)   +0.19 ( 0.13)   +0.56 ( 0.25)   +0.16 ( 0.13)   +0.15 ( 0.13) |  -0.07 /  -0.02 |  1691
+   width:NARROWER  xwoba      31 |  +19.75    +16.50 ( 7.10)  +13.95 ( 6.42)   +3.95 ( 9.87)  +15.20 ( 5.32)  +15.07 ( 5.82) |  +3.24 /  +4.54 |  1865
+   width:NARROWER  whiff      31 |   +0.09     +0.32 ( 0.72)   -0.29 ( 0.69)   -0.42 ( 1.52)   -0.52 ( 0.70)   -0.72 ( 0.71) |  -0.24 /  +0.61 |  1865
+   width:NARROWER  chase      31 |   -0.80     -0.95 ( 0.89)   -0.80 ( 0.99)   -1.51 ( 1.52)   -0.82 ( 0.98)   -0.73 ( 0.96) |  +0.14 /  +0.01 |  1865
+   width:NARROWER  sweet      31 |   -1.11     -1.47 ( 1.38)   -0.65 ( 1.01)   -0.14 ( 1.63)   -0.56 ( 0.95)   -0.76 ( 1.01) |  +0.37 /  -0.55 |  1865
+   width:NARROWER  K          31 |   -1.11     -0.69 ( 1.11)   -1.03 ( 0.98)   -0.86 ( 2.63)   -1.18 ( 0.92)   -1.40 ( 0.94) |  -0.42 /  +0.07 |  1865
+   width:NARROWER  bat_speed  31 |   +0.13     +0.18 ( 0.15)   +0.14 ( 0.15)   -0.01 ( 0.24)   +0.17 ( 0.15)   +0.18 ( 0.15) |  -0.04 /  -0.03 |  1865
+   depth:BACK      xwoba      11 |  +29.64    +29.75 (13.57)  +31.38 (11.42)  +36.71 ( 9.53)  +35.66 (10.27)  +36.53 (10.63) |  -0.11 /  -6.01 |  2024
+   depth:BACK      whiff      11 |   -2.11     -2.53 ( 1.09)   -2.12 ( 0.93)   -3.16 ( 1.28)   -2.33 ( 0.76)   -2.15 ( 0.78) |  +0.42 /  +0.22 |  2024
+   depth:BACK      chase      11 |   -3.02     -2.44 ( 1.17)   -1.90 ( 1.64)   -3.86 ( 1.86)   -2.40 ( 1.48)   -2.31 ( 1.54) |  -0.57 /  -0.61 |  2024
+   depth:BACK      sweet      11 |   +1.94     +1.51 ( 3.20)   +2.11 ( 1.74)   +1.94 ( 1.84)   +2.89 ( 1.60)   +2.89 ( 1.65) |  +0.43 /  -0.96 |  2024
+   depth:BACK      K          11 |   -0.36     -0.66 ( 1.43)   -1.65 ( 0.85)   -5.69 ( 2.06)   -2.01 ( 1.07)   -2.06 ( 1.13) |  +0.30 /  +1.65 |  2024
+   depth:BACK      bat_speed  11 |   +0.12     +0.15 ( 0.30)   +0.18 ( 0.30)   -0.17 ( 0.32)   +0.09 ( 0.28)   +0.09 ( 0.29) |  -0.03 /  +0.03 |  2024
+   depth:UP        xwoba      12 |   +2.49     +7.26 (13.17)   +8.98 (15.56)   +4.50 (16.00)  +13.27 (14.88)  +12.74 (14.86) |  -4.77 / -10.78 |  2082
+   depth:UP        whiff      12 |   +1.41     +0.20 ( 1.45)   -0.19 ( 1.36)   -0.21 ( 1.59)   -0.10 ( 1.34)   -0.07 ( 1.32) |  +1.22 /  +1.51 |  2082
+   depth:UP        chase      12 |   +0.61     +0.78 ( 1.44)   +0.51 ( 0.90)   -1.72 ( 1.83)   +0.41 ( 0.91)   +0.51 ( 0.93) |  -0.17 /  +0.20 |  2082
+   depth:UP        sweet      12 |   -0.56     -0.40 ( 3.43)   -1.23 ( 3.22)   -0.78 ( 3.30)   -1.05 ( 2.94)   -1.13 ( 3.02) |  -0.16 /  +0.48 |  2082
+   depth:UP        K          12 |   +0.30     -0.89 ( 2.43)   -1.49 ( 1.94)   -3.70 ( 3.31)   -1.16 ( 1.89)   -1.12 ( 1.95) |  +1.19 /  +1.46 |  2082
+   depth:UP        bat_speed  12 |   -0.43     -0.29 ( 0.28)   -0.29 ( 0.26)   -0.55 ( 0.39)   -0.34 ( 0.25)   -0.36 ( 0.25) |  -0.14 /  -0.09 |  2082
+
+   BOUNCE-BACK SHARE of the raw xwOBA gain, width + depth changes pooled (paper: about 30%):
+   raw gain +23.6 | bounce-back: match20 +6.9 (29%) | gbm +8.1 (34%) | dr +8.4 (36%)  [n 101]

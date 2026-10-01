@@ -1,0 +1,38 @@
+1119 hitter-seasons (60+ swings vs each hand); diff SD 1.9 deg; |diff| >= 3 deg: 8%, >= 5 deg: 3%
+habitual adjusters (|diff| >= 3 deg, same direction, 2 seasons running): 12 hitters (9 open MORE vs same-hand, 6 open LESS)
+
+the adjusters (avg diff; + = more open vs same-hand) and their same-minus-opposite xwOBA gap:
+              name side          seasons  diff  gap_xw
+   Torres, Gleyber    R 2024, 2025, 2026  -3.8   -45.8
+ Espinal, Santiago    R       2024, 2025  -3.5   -19.3
+Benintendi, Andrew    L 2024, 2025, 2026  -3.5   -46.8
+  d'Arnaud, Travis    R 2024, 2025, 2026  -3.1   -21.8
+      McNeil, Jeff    L 2024, 2025, 2026  -2.5    -7.0
+   McKinstry, Zach    L       2025, 2026   3.0   -18.0
+    Hedges, Austin    R 2024, 2025, 2026   3.2   -34.2
+    Baldwin, Drake    L       2025, 2026   4.1   -37.7
+       Raley, Luke    L       2024, 2025   4.9   -60.7
+     Marsee, Jakob    L       2025, 2026   6.0   -12.3
+    Ohtani, Shohei    L 2024, 2025, 2026   8.5   -62.0
+     Gorman, Nolan    L 2024, 2025, 2026   9.9   -24.5
+
+adjusters vs everyone else (hitter-season averages):
+adjuster        False   True 
+n                1088      31
+height          72.23   71.83
+age             28.37   30.16
+share_R          0.67    0.35
+bat_speed       71.05   70.28
+chase           29.52   27.42
+whiff           23.07   23.28
+xw_all         309.05  312.09
+gap_xw         -27.29  -32.97
+gap_K            1.22    1.33
+gap_chase        0.73    1.51
+setup_turn       5.84    9.58
+setup_turn_sd    12.3   10.96
+
+does opening MORE vs same-hand pitchers shrink the same-hand penalty? (per 5 deg of diff)
+   same-hand xwOBA gap (pts; + = better vs same-hand) between hitters -1.25 (z -0.3) | same hitter season to season -2.88 (z -0.5)
+   same-hand K% gap (pp)                            between hitters -1.12 (z -2.3) | same hitter season to season -0.13 (z -0.2)
+   same-hand chase gap (pp)                         between hitters +0.12 (z +0.3) | same hitter season to season +0.77 (z +1.3)

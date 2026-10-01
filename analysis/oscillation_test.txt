@@ -1,0 +1,14 @@
+
+=== FULL SEASON (replication): 690 hitter-seasons; movers 345 (oscillators 247, directional 98)
+   oscillators  share declined   54% | mean change  -3.4 xwOBA pts | 1st half vs prior season  +0.8
+   directional  share declined   59% | mean change  -3.6 xwOBA pts | 1st half vs prior season  -1.8
+   non-movers   share declined   61% | mean change  -7.6 xwOBA pts | 1st half vs prior season  +0.4
+   regression (n 385): oscillation 0 -> 1 -11.4 pts (z -1.8); tinkering +1 SD +5.3 (z +2.2); hot 1st half +10 pts -> -5.6 (bounce-back); osc x tinker -12.5 (z -1.4)
+   Guerrero 2026: tinkering -0.26 SD, primary angle, oscillation 0.70, change -27
+
+=== PROSPECTIVE (oscillation Apr-Jul -> Aug-Sep): 666 hitter-seasons; movers 333 (oscillators 156, directional 177)
+   oscillators  share declined   54% | mean change  +0.3 xwOBA pts | 1st half vs prior season  -0.9
+   directional  share declined   57% | mean change  -5.4 xwOBA pts | 1st half vs prior season  +2.0
+   non-movers   share declined   61% | mean change  -7.8 xwOBA pts | 1st half vs prior season  -0.6
+   regression (n 361): oscillation 0 -> 1 +3.2 pts (z +0.6); tinkering +1 SD +0.8 (z +0.3); hot 1st half +10 pts -> -5.3 (bounce-back); osc x tinker -7.3 (z -0.8)
+   Guerrero 2026: tinkering -0.30 SD, primary angle, oscillation 0.41, change -36

@@ -1,0 +1,41 @@
+A. WITHIN-HITTER MONTHLY PANEL, all four stance measurements jointly: 5,000 hitter-months, 639 hitters
+outcome                                 3 in WIDER       3 in DEEPER  3 in FARTHER OFF     10 deg CLOSED
+whiff % per swing                  -0.29 (z  -2.7)   -0.37 (z  -2.4)   +0.31 (z  +1.6)   +0.10 (z  +0.6)
+strikeout % per PA                 -0.27 (z  -2.2)   -0.38 (z  -2.2)   +0.15 (z  +0.6)   +0.24 (z  +1.1)
+HR per 600 PA                      -0.43 (z  -1.6)   +0.36 (z  +0.8)   -0.05 (z  -0.1)   -0.38 (z  -0.8)
+expected HR per 600 PA             -0.59 (z  -2.9)   +0.52 (z  +1.6)   +0.46 (z  +0.9)   -0.34 (z  -1.0)
+barrels per 600 PA                 -1.13 (z  -3.5)   +0.68 (z  +1.3)   +1.43 (z  +1.9)   -0.31 (z  -0.6)
+barrel % of balls in play          -0.32 (z  -3.9)   +0.14 (z  +1.1)   +0.39 (z  +2.0)   -0.07 (z  -0.6)
+hard-hit % (95+ mph)               -0.58 (z  -3.4)   +0.20 (z  +0.7)   +0.94 (z  +2.6)   +0.18 (z  +0.8)
+exit velocity (mph)                -0.14 (z  -2.4)   +0.04 (z  +0.4)   +0.24 (z  +2.0)   -0.05 (z  -0.6)
+ISO (points)                       -2.90 (z  -1.7)   +2.09 (z  +0.8)   -1.06 (z  -0.3)   -3.40 (z  -1.2)
+sweet-spot % of balls in play      +0.07 (z  +0.5)   +0.31 (z  +1.4)   +0.53 (z  +1.7)   +0.11 (z  +0.5)
+xwOBA per PA (points)              -1.86 (z  -1.9)   +4.42 (z  +3.2)   +3.79 (z  +1.6)   -2.22 (z  -1.5)
+
+A2. FRONT-FOOT CHECK (monthly foot geometry, not park-adjusted): 5,000 hitter-months, 639 hitters
+outcome                                 3 in WIDER       3 in DEEPER  3 in FARTHER OFF     10 deg CLOSED front toe +10 open
+whiff % per swing                  -0.28 (z  -2.7)   -0.37 (z  -2.4)   +0.29 (z  +1.5)   +0.10 (z  +0.5)   -0.02 (z  -0.1)
+strikeout % per PA                 -0.24 (z  -1.9)   -0.39 (z  -2.2)   +0.16 (z  +0.7)   +0.13 (z  +0.6)   -0.24 (z  -1.4)
+HR per 600 PA                      -0.43 (z  -1.6)   +0.39 (z  +0.8)   -0.06 (z  -0.1)   -0.38 (z  -0.7)   -0.05 (z  -0.1)
+expected HR per 600 PA             -0.58 (z  -2.8)   +0.52 (z  +1.6)   +0.41 (z  +0.8)   -0.35 (z  -0.9)   -0.03 (z  -0.1)
+barrels per 600 PA                 -1.17 (z  -3.6)   +0.67 (z  +1.3)   +1.46 (z  +1.9)   -0.19 (z  -0.4)   +0.25 (z  +0.5)
+barrel % of balls in play          -0.33 (z  -3.9)   +0.14 (z  +1.1)   +0.40 (z  +2.1)   -0.06 (z  -0.4)   +0.03 (z  +0.3)
+hard-hit % (95+ mph)               -0.60 (z  -3.5)   +0.21 (z  +0.7)   +0.94 (z  +2.7)   +0.23 (z  +0.9)   +0.11 (z  +0.5)
+exit velocity (mph)                -0.14 (z  -2.5)   +0.05 (z  +0.6)   +0.24 (z  +2.1)   -0.02 (z  -0.3)   +0.04 (z  +0.6)
+ISO (points)                       -2.71 (z  -1.5)   +2.13 (z  +0.8)   -1.40 (z  -0.4)   -4.02 (z  -1.3)   -1.51 (z  -0.6)
+sweet-spot % of balls in play      +0.10 (z  +0.7)   +0.33 (z  +1.6)   +0.56 (z  +1.8)   +0.00 (z  +0.0)   -0.22 (z  -1.2)
+xwOBA per PA (points)              -1.94 (z  -1.9)   +4.52 (z  +3.3)   +3.86 (z  +1.7)   -1.98 (z  -1.2)   +0.52 (z  +0.4)
+
+B. SLUMP-MATCHED STANCE-ANGLE CHANGES: effect beyond bounce-back (29 of 74 angle changes with full windows)
+outcome                                 Closed n16        Opened n13
+whiff % per swing                  +0.11 (z  +0.1)   -0.93 (z  -0.8)
+strikeout % per PA                 +1.52 (z  +0.8)   -1.27 (z  -0.7)
+HR per 600 PA                      -0.23 (z  -0.1)   +8.21 (z  +2.0)
+expected HR per 600 PA             -2.59 (z  -0.8)   +3.45 (z  +1.0)
+barrels per 600 PA                 -0.81 (z  -0.2)   -0.79 (z  -0.1)
+barrel % of balls in play          -0.09 (z  -0.1)   -0.39 (z  -0.3)
+hard-hit % (95+ mph)               -0.06 (z  -0.0)   -0.29 (z  -0.1)
+exit velocity (mph)                -0.35 (z  -0.4)   -0.47 (z  -0.8)
+ISO (points)                       +0.56 (z  +0.0)  +25.54 (z  +1.1)
+sweet-spot % of balls in play      -0.67 (z  -0.3)   -1.58 (z  -0.5)
+xwOBA per PA (points)             -23.57 (z  -2.4)   +6.17 (z  +0.4)

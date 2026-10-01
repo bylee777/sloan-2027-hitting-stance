@@ -1,0 +1,37 @@
+PA sample: 425,378 (301,349 train 2024-25, 124,029 test 2026); hitters 517, pitchers 806; interactions 42, controls 91
+
+=== strikeout % (pp) — TRAIN 2024-25, 301,349 PA. Change in the effect of +3 in per 1 SD of the pitcher trait
+   depth  same -0.07 velo -0.09 brk +0.21* off +0.02 sweep +0.01 rise -0.15 ext -0.03 arm +0.02 zone +0.06 Kp +0.08 chasep +0.12 same_x_brk -0.11 same_x_chase_b +0.21 same_x_whiff_b +0.04
+   offp   same +0.09 velo +0.17 brk +0.24 off +0.03 sweep +0.04 rise -0.18 ext +0.02 arm +0.02 zone -0.02 Kp +0.07 chasep -0.04 same_x_brk -0.40* same_x_chase_b +0.52 same_x_whiff_b -0.35
+   width  same -0.07 velo +0.04 brk +0.13* off +0.03 sweep +0.03 rise -0.06 ext +0.05 arm +0.02 zone +0.03 Kp -0.03 chasep +0.06 same_x_brk -0.09 same_x_chase_b +0.16 same_x_whiff_b -0.15
+   joint test (the pitcher changes nothing): chi2(42) = 49.1, p = 0.2106   (* = |z| >= 2)
+   VALIDATION 2026 (124,029 PA): lambda = -0.06 (SE 0.28, z vs 0 -0.2, z vs 1 -3.8);  per lever: depth -0.49 (0.46), offp +0.25 (0.42), width -0.12 (0.47)
+
+=== wOBA (pts) — TRAIN 2024-25, 300,580 PA. Change in the effect of +3 in per 1 SD of the pitcher trait
+   depth  same +1.63 velo +1.10 brk -1.57 off +0.16 sweep +0.35 rise -1.26 ext +0.58 arm +1.62 zone +0.39 Kp -1.84 chasep +0.28 same_x_brk +1.03 same_x_chase_b +0.96 same_x_whiff_b -1.89
+   offp   same +1.55 velo +1.15 brk +0.08 off +2.76 sweep -1.08 rise +0.14 ext +0.44 arm -2.20 zone +0.30 Kp -0.51 chasep -0.88 same_x_brk +0.37 same_x_chase_b -2.11 same_x_whiff_b +2.46
+   width  same -0.30 velo +0.73 brk -0.07 off -0.63 sweep -0.19 rise +0.76 ext -1.05* arm -0.30 zone -0.69 Kp +0.55 chasep -0.45 same_x_brk +0.46 same_x_chase_b +1.17 same_x_whiff_b -0.84
+   joint test (the pitcher changes nothing): chi2(42) = 46.9, p = 0.2788   (* = |z| >= 2)
+   VALIDATION 2026 (123,615 PA): lambda = -0.13 (SE 0.25, z vs 0 -0.5, z vs 1 -4.5);  per lever: depth +0.31 (0.47), offp +0.52 (0.55), width -0.84 (0.42)
+
+=== run value (runs/100 PA) — TRAIN 2024-25, 301,349 PA. Change in the effect of +3 in per 1 SD of the pitcher trait
+   depth  same +0.08 velo +0.08 brk -0.14 off +0.03 sweep +0.03 rise -0.14 ext +0.06 arm +0.17 zone +0.05 Kp -0.10 chasep -0.01 same_x_brk +0.08 same_x_chase_b +0.12 same_x_whiff_b -0.21
+   offp   same +0.14 velo +0.07 brk -0.00 off +0.24 sweep -0.08 rise -0.00 ext +0.04 arm -0.19 zone +0.00 Kp -0.06 chasep -0.06 same_x_brk +0.02 same_x_chase_b -0.16 same_x_whiff_b +0.23
+   width  same -0.05 velo +0.06 brk -0.02 off -0.04 sweep -0.00 rise +0.04 ext -0.09 arm +0.00 zone -0.06 Kp +0.06 chasep -0.05 same_x_brk +0.05 same_x_chase_b +0.12 same_x_whiff_b -0.09
+   joint test (the pitcher changes nothing): chi2(42) = 53.7, p = 0.1058   (* = |z| >= 2)
+   VALIDATION 2026 (124,029 PA): lambda = -0.10 (SE 0.24, z vs 0 -0.4, z vs 1 -4.6);  per lever: depth +0.28 (0.43), offp +0.50 (0.53), width -0.81 (0.41)
+
+=== MECHANISM: chase on out-of-zone pitches (pp), per +3 in, per 1 SD — key terms, train 2024-25 vs 2026
+   depth|same             train  -0.40 (z -2.7)   2026  -0.22 (z -0.9)
+   depth|brk              train  +0.14 (z +1.9)   2026  -0.03 (z -0.2)
+   depth|same_x_brk       train  -0.18 (z -2.1)   2026  +0.07 (z +0.4)
+   depth|same_x_chase_b   train  +0.10 (z +0.7)   2026  -0.64 (z -2.6)
+   depth|Kp               train  -0.07 (z -1.1)   2026  +0.16 (z +1.4)
+   depth|chasep           train  +0.15 (z +1.7)   2026  -0.05 (z -0.4)
+   depth|velo             train  +0.09 (z +1.3)   2026  +0.10 (z +0.9)
+   width|same             train  -0.05 (z -0.6)   2026  -0.05 (z -0.4)
+   width|brk              train  +0.02 (z +0.5)   2026  +0.09 (z +1.1)
+   width|same_x_chase_b   train  +0.03 (z +0.3)   2026  +0.12 (z +0.9)
+   offp|same              train  +0.74 (z +2.7)   2026  +0.63 (z +1.7)
+   offp|brk               train  -0.07 (z -0.6)   2026  -0.23 (z -1.3)
+   offp|sweep             train  +0.15 (z +1.7)   2026  +0.05 (z +0.4)

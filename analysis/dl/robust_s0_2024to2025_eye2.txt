@@ -1,0 +1,22 @@
+EYE=posture lean 2: features rebuilt with posture-based eye height
+rv: test R2 full 0.0328 | zone+count only 0.0293
+chase: test logloss full 0.4101 | zone+count only 0.4609
+whiff: test logloss full 0.4245 | zone+count only 0.4356
+models trained in 47s
+
+mechanism, model: per ft CLOSER, whiff on AWAY -5.63 pp, IN +6.03 pp (vs middle)   | measured: AWAY -3.35, IN +3.47
+eye -1 in: run value -0.0023/100 pitches (high pitches +0.0928, low -0.0202); chase -0.37 pp; whiff -0.82 pp
+eye +1 in: run value +0.0040/100 pitches (high pitches -0.0853, low +0.0205); chase +0.34 pp; whiff +0.83 pp
+  recommender: 0/120 hitters, 71s
+  recommender: 30/120 hitters, 111s
+  recommender: 60/120 hitters, 151s
+  recommender: 90/120 hitters, 192s
+
+RECOMMENDER (2025; 120 regulars x 844 pitcher-sides; runs per 100 pitches, scored out-of-half)
+  gain from the hitter's single best DEFAULT spot: mean +0.186 (median +0.185)
+  gain from choosing the best spot PER PITCHER:   mean +0.184
+  => value of adjusting by pitcher (beyond the default): mean -0.002, 90th pct hitter +0.025 runs/100 pitches (~x24 for a 2,400-pitch season)
+  hitters' best default spot (depth_lateral, inches; lateral - = closer): {'rv_6_3': 0.68, 'rv_6_-3': 0.32}
+  share of hitter-pitcher matchups where the per-pitcher pick = the hitter's default: 64%
+  in-sample UPPER BOUND on per-pitcher value: +0.040
+SUMMARY s0_2024to2025_eye2 default +0.1860 per_pitcher +0.1845 adjust -0.0015 deeper_default_share 1.00

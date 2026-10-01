@@ -1,0 +1,19 @@
+rv: test R2 full 0.0329 | zone+count only 0.0289
+chase: test logloss full 0.4048 | zone+count only 0.4608
+whiff: test logloss full 0.4236 | zone+count only 0.4355
+models trained in 43s
+
+mechanism, model: per ft CLOSER, whiff on AWAY -4.66 pp, IN +4.44 pp (vs middle)   | measured: AWAY -3.35, IN +3.47
+  recommender: 0/120 hitters, 49s
+  recommender: 30/120 hitters, 90s
+  recommender: 60/120 hitters, 133s
+  recommender: 90/120 hitters, 177s
+
+RECOMMENDER (2025; 120 regulars x 844 pitcher-sides; runs per 100 pitches, scored out-of-half)
+  gain from the hitter's single best DEFAULT spot: mean +0.166 (median +0.166)
+  gain from choosing the best spot PER PITCHER:   mean +0.160
+  => value of adjusting by pitcher (beyond the default): mean -0.006, 90th pct hitter +0.013 runs/100 pitches (~x24 for a 2,400-pitch season)
+  hitters' best default spot (depth_lateral, inches; lateral - = closer): {'rv_6_-3': 0.95, 'rv_6_3': 0.05}
+  share of hitter-pitcher matchups where the per-pitcher pick = the hitter's default: 63%
+  in-sample UPPER BOUND on per-pitcher value: +0.032
+SUMMARY s1_2024to2025 default +0.1659 per_pitcher +0.1601 adjust -0.0058 deeper_default_share 1.00

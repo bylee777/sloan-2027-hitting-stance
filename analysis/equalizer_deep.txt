@@ -1,0 +1,17 @@
+(1a) month to month, same hitter (10,228 hitter-months, 994 hitters):
+     +1 in wider setup -> landing +0.13 in (SE 0.01), stride -0.77 in (SE 0.02)
+     within-hitter SD: setup width 2.32 in, landing width 0.98 in
+
+(1b) 177 sustained width changes (2 months before vs after):
+     NARROWER  n  83: setup  -5.6 in -> landing  -0.7 in, stride  +4.2 in (share of the setup change that reaches landing 12%)
+     WIDER     n  94: setup  +5.2 in -> landing  +0.7 in, stride  -3.9 in (share of the setup change that reaches landing 14%)
+     slope landing-change on setup-change +0.11 (1 = landing moves with the setup, 0 = landing fully defended)
+
+(2) landing width as % of height: mean 57.2%, SD 4.0 (1145 hitter-seasons)
+     bat speed (mph)    curvature -0.0008 (z -0.2) -> peak at  85.0% | linear per +5% of height +0.22 (z +1.6)
+     whiff %            curvature +0.0039 (z +0.4) -> trough at  62.9% | linear per +5% of height -0.23 (z -0.7)
+     xwOBA on contact   curvature +0.2180 (z +2.6) -> trough at  58.8% | linear per +5% of height -3.78 (z -1.3)
+     xwOBA              curvature +0.1781 (z +3.1) -> trough at  57.4% | linear per +5% of height -0.57 (z -0.3)
+     within hitter, per +5% of height wider landing: bat speed        +0.25 (z +1.4)
+     within hitter, per +5% of height wider landing: whiff %          -0.23 (z -0.5)
+     within hitter, per +5% of height wider landing: xwOBA on contact -15.75 (z -2.5)

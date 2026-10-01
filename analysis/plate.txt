@@ -1,0 +1,17 @@
+hitter-seasons 1670; off-plate mean 27.6 in (SD 2.4); reach p90 mean 44.6 in (SD 2.3); corr(height, reach) +0.31; corr(off-plate, reach) +0.88; corr(depth, off-plate) -0.12
+
+A. per ft CLOSER to the plate: change in the same-hand strikeout penalty (pp per PA)  [- = helps]
+   ALL 2024-26 K -1.04 (z -1.0) | chase -0.76 (z -1.1) | zone_whiff +0.30 (z +0.6) | looking -0.59 (z -1.4)
+   low chase   K -1.37 (z -0.9) | chase +0.63 (z +0.5) | zone_whiff -1.86 (z -2.3) | looking -0.17 (z -0.2)
+   mid chase   K -2.00 (z -1.0) | chase -0.83 (z -0.7) | zone_whiff -0.06 (z -0.1) | looking -1.08 (z -1.6)
+   HIGH chase  K +0.10 (z +0.0) | chase -0.99 (z -0.7) | zone_whiff +1.80 (z +1.5) | looking -0.70 (z -0.6)
+
+B. per ft CLOSER: outcome on AWAY and IN pitches relative to MIDDLE pitches (hitter-centric thirds)
+   share of same-hand pitches away/in: 51%/28%; opposite-hand: 43%/33%
+   whiff per swing (pp; - helps)    AWAY -3.35 (z -4.0) | IN +3.47 (z +3.2)
+   xwOBA on contact (pts; + helps)  AWAY +57.30 (z +5.5) | IN +13.38 (z +1.3)
+
+C. same-hand run value per 100 pitches (+ helps): base effect and how it changes per 1 SD of each trait
+   height_in closer: -0.08 (z -0.3), x trait +0.18 (z +0.9) | deeper: +0.08 (z +0.5), x trait -0.02 (z -0.1)
+   reach     closer: -0.03 (z -0.1), x trait +0.02 (z +0.1) | deeper: +0.08 (z +0.5), x trait +0.21 (z +1.8)
+   ev        closer: -0.07 (z -0.3), x trait -0.24 (z -1.2) | deeper: +0.08 (z +0.6), x trait -0.14 (z -0.9)

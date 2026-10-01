@@ -1,0 +1,10 @@
+ task                                  model  test_logloss  test_auc  secs
+chase                      boost: perception        0.4301    0.8401    12
+chase             boost: FULL raw pitch data        0.4205    0.8486    14
+chase NETWORK: perception + hitter embedding        0.4066    0.8614     9
+chase                        (constant rate)        0.5942    0.5000     0
+ task                                  model  test_logloss  test_auc  secs
+whiff                      boost: perception        0.4382    0.7740     5
+whiff             boost: FULL raw pitch data        0.4354    0.7798    15
+whiff NETWORK: perception + hitter embedding        0.4273    0.7879     7
+whiff                        (constant rate)        0.5414    0.5000     0

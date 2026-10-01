@@ -1,0 +1,6 @@
+hitter-seasons: 951; average two-strike change (same pitch mix): bat speed -1.65 mph (SD across hitters 0.84), whiff -5.08 pp, EV -0.12 mph, q x100 +0.98
+
+per 1 mph of DELIBERATE bat speed (across hitters; slope of two-strike change on bat-speed change):
+   whiff % of swings              +1.84 (z +14.0)   | naive swing-level slope was -0.07 (z -3.2)
+   exit velocity (mph)            +0.67 (z +9.2)   | naive swing-level slope was +0.76 (z +86)
+   collision efficiency q x100    -0.25 (z -5.2)   | naive swing-level slope was -0.22 (z -38)

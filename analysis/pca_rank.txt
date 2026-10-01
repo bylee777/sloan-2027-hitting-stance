@@ -1,0 +1,16 @@
+
+=== 2026 (T0 2026-06-10); comparison group: 141 regulars with no stance event
+   xwOBA         PCA  +35.57 | others: mean -13.30, SD 38.26 | PCA vs others  +48.87 (z +1.3); PCA's change beats 90.1% of them
+   bat speed     PCA   +0.55 | others: mean  +0.19, SD  0.70 | PCA vs others   +0.36 (z +0.5); PCA's change beats 73.0% of them
+   chase %       PCA   -6.79 | others: mean  +0.92, SD  3.92 | PCA vs others   -7.71 (z -2.0); PCA's change beats  2.1% of them
+   sweet-spot %  PCA  +10.07 | others: mean  -0.50, SD  4.89 | PCA vs others  +10.57 (z +2.2); PCA's change beats 98.6% of them
+   whiff %       PCA   -2.32 | others: mean  +0.05, SD  2.81 | PCA vs others   -2.37 (z -0.8); PCA's change beats 21.3% of them
+   K %           PCA   +0.48 | others: mean  +0.30, SD  3.76 | PCA vs others   +0.18 (z +0.0); PCA's change beats 51.8% of them
+
+=== 2025 (T0 2025-06-10); comparison group: 154 regulars with no stance event
+   xwOBA         PCA  -18.61 | others: mean  -7.89, SD 34.05 | PCA vs others  -10.73 (z -0.3); PCA's change beats 42.2% of them
+   bat speed     PCA   +1.25 | others: mean  +0.25, SD  0.76 | PCA vs others   +1.00 (z +1.3); PCA's change beats 91.6% of them
+   chase %       PCA   -3.94 | others: mean  +0.71, SD  3.31 | PCA vs others   -4.65 (z -1.4); PCA's change beats  5.8% of them
+   sweet-spot %  PCA   -8.34 | others: mean  +0.04, SD  5.07 | PCA vs others   -8.38 (z -1.7); PCA's change beats  5.8% of them
+   whiff %       PCA   -0.08 | others: mean  +0.29, SD  2.82 | PCA vs others   -0.36 (z -0.1); PCA's change beats 44.2% of them
+   K %           PCA   -2.20 | others: mean  +0.67, SD  3.69 | PCA vs others   -2.87 (z -0.8); PCA's change beats 18.8% of them

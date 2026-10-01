@@ -1,0 +1,12 @@
+deeper per 3 in, sweet-spot (pp)
+  all 150 changes           : +1.57 [+0.44, +2.70]  P(>0)=0.99
+  drop PCA 2024 (depth+width): +1.38 [+0.12, +2.65]  P(>0)=0.96
+  drop width half of 4 overlapping pairs: +1.56 [+0.40, +2.74]  P(>0)=0.99
+  leave-one-depth-event-out: mean range +1.27 .. +1.83; lower 90% bound < 0 in 0 of 26
+            name year  size  mean  lo90
+    Báez, Javier 2024  -9.7  1.27  0.12
+      Neto, Zach 2024 -10.0  1.38  0.17
+Springer, George 2024  -5.4  1.40  0.20
+ Mullins, Cedric 2026  -5.1  1.40  0.22
+deeper per 3 in, chase: all -0.47 [-1.19, +0.27]  P(>0)=0.15 | drop PCA 2024 -0.58 [-1.37, +0.21]  P(>0)=0.12
+deeper per 3 in, xwOBA: all +5.55 [-1.53, +12.51]  P(>0)=0.90 | drop PCA 2024 +4.90 [-3.05, +12.89]  P(>0)=0.84

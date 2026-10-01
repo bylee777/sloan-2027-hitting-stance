@@ -1,0 +1,6 @@
+2026 window            games  depth  width   PA  chase%  sweet%  xwOBA | out-of-zone pitches, balls in play
+Opening Day - Apr 30      30   30.2   32.9  126    45.1    24.1  0.288 | 257, 79
+May 1-17                  16   30.6   32.6   64    30.1    33.3  0.373 | 123, 45
+May 18 - Jun 9            20   31.2   27.1   90    34.9    50.9  0.433 | 192, 53
+Jun 10 - Jul 31           42   33.5   17.6  199    29.0    47.3  0.374 | 472, 112
+Aug 1 - Sep 22            47   33.7   19.3  221    34.3    42.4  0.404 | 469, 144

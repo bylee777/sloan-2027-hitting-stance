@@ -1,0 +1,2 @@
+1145 hitter-seasons; variance explained by 4 components: 63.5% (25.3%, 15.3%, 12.9%, 10.0%)
+year-to-year r of each hitter's score (565 consecutive-season pairs): PC1 0.87, PC2 0.88, PC3 0.91, PC4 0.93

@@ -1,0 +1,32 @@
+A. 1119 hitter-seasons with >= 60 swings vs each hand: SAME-hand minus OPPOSITE-hand
+   front-foot turn at setup (deg)     mean +0.43, SD 1.88, |diff| >= 10 deg or 3 in: 0%; same hitter next season r = +0.50
+   front-foot turn at landing (deg)   mean +0.78, SD 1.67, |diff| >= 10 deg or 3 in: 0%; same hitter next season r = +0.42
+   stance-line angle (deg)            mean -0.54, SD 1.54, |diff| >= 10 deg or 3 in: 0%; same hitter next season r = +0.53
+   depth (in)                         mean +0.12, SD 0.58, |diff| >= 10 deg or 3 in: 0%; same hitter next season r = +0.55
+   width (in)                         mean +0.05, SD 0.67, |diff| >= 10 deg or 3 in: 0%; same hitter next season r = +0.45
+
+B. monthly panel: 5,719 hitter-months (1497 hitter-seasons); within-hitter month-to-month SD: setup turn 3.2 deg, landing turn 1.7 deg
+
+(a) within hitter, per 10 deg MORE OPEN front foot (month to month; hitter-season + month FE)
+   strikeout % (pp)     setup +0.20 (z +0.6) | landing -0.83 (z -1.5)   n 4,222
+   chase % (pp)         setup -0.12 (z -0.5) | landing -0.48 (z -1.1)   n 4,222
+   whiff % (pp)         setup +0.38 (z +1.6) | landing -0.37 (z -0.9)   n 4,222
+   xwOBA (pts)          setup -2.55 (z -1.1) | landing +10.69 (z +2.3)   n 4,222
+
+(c) placebo: NEXT month's foot turn added (should be ~0)
+   strikeout % (pp)     next-month setup +0.14 (z +0.4) | next-month landing -0.48 (z -0.8)  || this month setup -0.10 (z -0.2)
+   chase % (pp)         next-month setup +0.15 (z +0.5) | next-month landing +0.18 (z +0.3)  || this month setup -0.36 (z -1.1)
+   whiff % (pp)         next-month setup +0.05 (z +0.2) | next-month landing +0.03 (z +0.1)  || this month setup -0.04 (z -0.1)
+   xwOBA (pts)          next-month setup +1.72 (z +0.6) | next-month landing +4.18 (z +0.8)  || this month setup -1.06 (z -0.3)
+
+(b) double machine learning (gradient boosting, 5-fold cross-fitting by hitter)
+   strikeout % (pp)     setup +0.11 (z +0.5) | landing -0.40 (z -0.9)   n 5,719
+   chase % (pp)         setup -0.26 (z -1.3) | landing -0.17 (z -0.5)   n 5,719
+   whiff % (pp)         setup +0.17 (z +1.0) | landing -0.18 (z -0.6)   n 5,719
+   xwOBA (pts)          setup -4.51 (z -2.3) | landing +10.58 (z +3.0)   n 5,719
+
+(d) by matchup, within hitter (as (a)): outcome on SAME-hand vs OPPOSITE-hand pitches
+   strikeout % (pp)     same-hand: setup +0.30 (z +0.7), landing +0.43 (z +0.5) | opp-hand: setup +0.25 (z +0.5), landing -1.19 (z -1.6)
+   chase % (pp)         same-hand: setup -0.35 (z -0.9), landing +0.29 (z +0.4) | opp-hand: setup +0.32 (z +1.0), landing -0.81 (z -1.3)
+   whiff % (pp)         same-hand: setup +0.17 (z +0.4), landing +0.41 (z +0.6) | opp-hand: setup +0.94 (z +3.1), landing -0.70 (z -1.2)
+   xwOBA (pts)          same-hand: setup -3.71 (z -1.1), landing +4.66 (z +0.7) | opp-hand: setup -5.25 (z -1.2), landing +14.58 (z +2.0)

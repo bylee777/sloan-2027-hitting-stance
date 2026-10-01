@@ -1,0 +1,76 @@
+A. BAYESIAN STANCE-CHANGE MODEL, 2024-25 changes with posture measured: 101 (59 width, 20 depth, 22 angle); control dates 9,840
+   posture shift beyond matched controls, width changes: per 3 in -0.34 in (z -5.6)
+   posture shift beyond matched controls, depth changes: per 3 in +0.17 in (z +1.5)
+   posture shift beyond matched controls, angle changes: per 10 deg closed +0.14 in (z +1.0)
+
+   sweet (n 87): without posture -> with posture shift held fixed
+      after-slump width         +0.66 [ -1.09,  +2.44]  ->   +0.73 [ -0.98,  +2.48]
+      after-slump depth         +1.05 [ -1.86,  +3.97]  ->   +1.04 [ -1.91,  +3.94]
+      after-slump angle         -1.93 [ -4.39,  +0.43]  ->   -1.88 [ -4.32,  +0.49]
+      per 3 in WIDER            +0.69 [ -0.53,  +1.89]  ->   +0.80 [ -0.55,  +2.13]
+      x chase-prone (wider)     +0.33 [ -1.34,  +2.01]  ->   +0.27 [ -1.41,  +2.01]
+      per 3 in DEEPER           +1.59 [ +0.28,  +2.87]  ->   +1.60 [ +0.21,  +2.99]
+      per 10 deg CLOSED         +1.00 [ -0.44,  +2.45]  ->   +1.00 [ -0.45,  +2.47]
+      posture: zone top +1 in                                  +0.20 [ -1.38,  +1.78]
+
+   whiff (n 87): without posture -> with posture shift held fixed
+      after-slump width         -0.04 [ -0.98,  +0.90]  ->   -0.05 [ -0.98,  +0.92]
+      after-slump depth         -0.28 [ -1.87,  +1.28]  ->   -0.28 [ -1.89,  +1.33]
+      after-slump angle         -0.19 [ -1.49,  +1.11]  ->   -0.20 [ -1.57,  +1.14]
+      per 3 in WIDER            -0.54 [ -1.19,  +0.11]  ->   -0.58 [ -1.32,  +0.15]
+      x chase-prone (wider)     +0.32 [ -0.61,  +1.21]  ->   +0.33 [ -0.56,  +1.24]
+      per 3 in DEEPER           -0.43 [ -1.15,  +0.30]  ->   -0.43 [ -1.18,  +0.34]
+      per 10 deg CLOSED         -0.42 [ -1.20,  +0.35]  ->   -0.43 [ -1.22,  +0.35]
+      posture: zone top +1 in                                  -0.07 [ -0.92,  +0.81]
+
+   chase (n 87): without posture -> with posture shift held fixed
+      after-slump width         -0.10 [ -1.16,  +0.96]  ->   -0.09 [ -1.15,  +0.99]
+      after-slump depth         -0.51 [ -2.28,  +1.28]  ->   -0.51 [ -2.25,  +1.23]
+      after-slump angle         +2.15 [ +0.68,  +3.59]  ->   +2.13 [ +0.64,  +3.59]
+      per 3 in WIDER            -0.06 [ -0.81,  +0.67]  ->   -0.07 [ -0.89,  +0.73]
+      x chase-prone (wider)     +0.36 [ -0.66,  +1.36]  ->   +0.35 [ -0.68,  +1.36]
+      per 3 in DEEPER           -0.51 [ -1.30,  +0.30]  ->   -0.51 [ -1.32,  +0.32]
+      per 10 deg CLOSED         -0.23 [ -1.12,  +0.65]  ->   -0.22 [ -1.11,  +0.68]
+      posture: zone top +1 in                                  -0.03 [ -1.02,  +0.95]
+
+   K (n 87): without posture -> with posture shift held fixed
+      after-slump width         -1.15 [ -2.39,  +0.12]  ->   -1.18 [ -2.42,  +0.04]
+      after-slump depth         -0.00 [ -2.10,  +2.07]  ->   -0.01 [ -2.07,  +2.02]
+      after-slump angle         +0.68 [ -1.00,  +2.40]  ->   +0.63 [ -1.13,  +2.36]
+      per 3 in WIDER            -0.39 [ -1.25,  +0.44]  ->   -0.39 [ -1.33,  +0.55]
+      x chase-prone (wider)     +0.12 [ -1.05,  +1.30]  ->   +0.11 [ -1.06,  +1.32]
+      per 3 in DEEPER           +0.28 [ -0.67,  +1.23]  ->   +0.30 [ -0.67,  +1.27]
+      per 10 deg CLOSED         -0.85 [ -1.87,  +0.16]  ->   -0.84 [ -1.85,  +0.19]
+      posture: zone top +1 in                                  -0.06 [ -1.18,  +1.06]
+
+   xwoba (n 87): without posture -> with posture shift held fixed
+      after-slump width        +15.13 [ +4.06, +26.17]  ->  +14.93 [ +3.60, +26.11]
+      after-slump depth        +18.47 [ -0.32, +36.65]  ->  +18.36 [ -0.09, +36.33]
+      after-slump angle         -7.92 [-22.88,  +7.09]  ->   -8.02 [-23.40,  +7.81]
+      per 3 in WIDER            +1.42 [ -5.96,  +9.14]  ->   +0.76 [ -7.69,  +9.27]
+      x chase-prone (wider)     -2.08 [-12.40,  +8.21]  ->   -1.90 [-12.55,  +8.67]
+      per 3 in DEEPER           +4.63 [ -3.29, +13.09]  ->   +4.74 [ -3.86, +13.29]
+      per 10 deg CLOSED         +0.68 [ -8.13,  +9.55]  ->   +0.97 [ -8.10, +10.13]
+      posture: zone top +1 in                                  -1.55 [-11.59,  +8.48]
+
+   bat_speed (n 87): without posture -> with posture shift held fixed
+      after-slump width         +0.15 [ -0.09,  +0.39]  ->   +0.15 [ -0.10,  +0.39]
+      after-slump depth         -0.30 [ -0.70,  +0.09]  ->   -0.30 [ -0.70,  +0.09]
+      after-slump angle         -0.09 [ -0.43,  +0.26]  ->   -0.09 [ -0.44,  +0.26]
+      per 3 in WIDER            +0.08 [ -0.09,  +0.24]  ->   +0.07 [ -0.12,  +0.25]
+      x chase-prone (wider)     -0.15 [ -0.37,  +0.08]  ->   -0.15 [ -0.38,  +0.08]
+      per 3 in DEEPER           +0.10 [ -0.07,  +0.29]  ->   +0.11 [ -0.07,  +0.29]
+      per 10 deg CLOSED         +0.14 [ -0.06,  +0.34]  ->   +0.14 [ -0.06,  +0.35]
+      posture: zone top +1 in                                  -0.02 [ -0.23,  +0.19]
+
+B. SLUMP-MATCHED COMPARISONS (Figure 3 design, after minus run-up), 2024-25: 79 changes
+   posture shift width:WIDER     -0.92 in (n 32)
+   posture shift width:NARROWER  +0.77 in (n 27)
+   posture shift depth:BACK      +0.69 in (n 9)
+   posture shift depth:UP        -0.65 in (n 11)
+                                         WIDER                  NARROWER                      BACK                        UP   posture coef (per in)
+   xwoba                      +18.88 -> +20.33          +17.03 -> +15.81          +28.12 -> +27.03          +12.89 -> +13.91   +1.57 (z +0.2)
+   whiff                       -0.89 ->  -0.45           +1.05 ->  +0.68           -2.81 ->  -3.15           +1.74 ->  +2.05   +0.49 (z +0.7)
+   chase                       +0.19 ->  +1.03           -0.15 ->  -0.85           -2.40 ->  -3.03           +1.95 ->  +2.54   +0.91 (z +1.5)
+   sweet                       +1.73 ->  +1.82           -2.55 ->  -2.62           +1.25 ->  +1.19           +2.68 ->  +2.74   +0.09 (z +0.1)
+   K                           -0.90 ->  +0.20           -0.50 ->  -1.42           +0.44 ->  -0.39           +0.49 ->  +1.26   +1.19 (z +1.3)

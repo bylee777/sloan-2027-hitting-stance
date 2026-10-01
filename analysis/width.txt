@@ -1,0 +1,28 @@
+width: hitter-season mean 29.8 in, SD 5.6; corr with depth -0.29, off-plate +0.16
+
+A1. between hitters, per 6 in WIDER (pitcher-season FE; controls depth, plate distance, height, side, year)
+   whiff per swing (pp)       -0.34 (z -1.2)
+   chase (pp)                 +0.22 (z +0.7)
+   K per PA (pp)              -0.45 (z -1.6)
+   xwOBA on contact (pts)     -4.90 (z -2.3)
+   exit velo (mph)            -0.17 (z -1.5)
+   sweet-spot % BIP (pp)      -0.01 (z -0.0)
+   bat speed (mph)            -0.16 (z -1.3)
+   swing length (ft)          -0.02 (z -1.0)
+
+A2. matchup moderation, per 6 in wider (batter-season FE + pitcher-season x side FE): x same-hand | x 1 SD pitcher FB velo | x 1 SD edge share
+   whiff per swing (pp)     same -0.08 (z -0.5) | velo +0.12 (z +2.0) | edge -0.05 (z -1.0)
+   chase (pp)               same +0.10 (z +0.7) | velo +0.03 (z +0.4) | edge -0.00 (z -0.1)
+   K per PA (pp)            same +0.18 (z +1.1) | velo +0.16 (z +2.4) | edge +0.03 (z +0.4)
+   xwOBA on contact (pts)   same -0.12 (z -0.1) | velo +0.79 (z +1.2) | edge +0.13 (z +0.2)
+   exit velo (mph)          same +0.03 (z +0.4) | velo +0.07 (z +2.3) | edge -0.04 (z -1.5)
+
+B. sustained mid-season width changes >= 4 in: 201 ({'WIDER': 102, 'NARROWER': 99}), mean |move| 6.0 in
+   whiff per swing (pp)     WIDER   -1.87 (SE 0.59, p 0.001, n 88) | NARROWER   -0.22 (SE 0.65, p 0.617, n 83)
+   chase (pp)               WIDER   +0.45 (SE 0.55, p 0.419, n 89) | NARROWER   -0.43 (SE 0.68, p 0.543, n 85)
+   K per PA (pp)            WIDER   -1.50 (SE 0.75, p 0.006, n 84) | NARROWER   -0.62 (SE 0.73, p 0.147, n 82)
+   xwOBA on contact (pts)   WIDER  +14.63 (SE 5.98, p 0.014, n 75) | NARROWER  +15.99 (SE 8.16, p 0.009, n 77)
+   exit velo (mph)          WIDER   +0.63 (SE 0.34, p 0.032, n 75) | NARROWER   +0.75 (SE 0.28, p 0.009, n 77)
+   sweet-spot % BIP (pp)    WIDER   +3.07 (SE 0.79, p 0.000, n 75) | NARROWER   +1.19 (SE 0.91, p 0.064, n 77)
+   bat speed (mph)          WIDER   -0.12 (SE 0.14, p 0.234, n 86) | NARROWER   +0.38 (SE 0.15, p 0.011, n 81)
+   swing length (ft)        WIDER   -0.04 (SE 0.02, p 0.005, n 86) | NARROWER   +0.05 (SE 0.02, p 0.006, n 81)

@@ -1,0 +1,8 @@
+pitcher-seasons: 1126
+pitch-mix change by batter hand (share of pitches that switch type): median 26%, mean 27%, >= 10%: 92%, >= 20%: 69%
+  sweeper+slider     vs same-hand  30.0%   vs opposite-hand  16.7%
+  changeup+splitter  vs same-hand   6.4%   vs opposite-hand  18.9%
+  sinker             vs same-hand  22.2%   vs opposite-hand  12.0%
+release-point (rubber) shift by batter hand: median 0.6 in, >= 2 in: 7%
+
+HITTERS, by pitcher hand: depth diff |same - opp| median 0.3 in, >= 2 in: 1%, >= 3 in: 0%

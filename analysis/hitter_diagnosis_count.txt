@@ -1,0 +1,21 @@
+balls in play modelled: 344,787
+   V0 original                        out-of-fold R^2 0.0439   gain vs V0 +0.0000 R^2 (z +nan)
+   V1 + balls                         out-of-fold R^2 0.0443   gain vs V0 +0.0003 R^2 (z +1.8)
+   V2 + pitcher count, times faced    out-of-fold R^2 0.0440   gain vs V0 +0.0001 R^2 (z +0.3)
+   V3 + pitch # in PA                 out-of-fold R^2 0.0439   gain vs V0 -0.0000 R^2 (z -0.1)
+
+model's view, xwOBA-on-contact points vs the first value (everything else as observed):
+   balls                              0:  +0.0  1:  +4.2  2:  +7.0  3: +13.6
+   strikes                            0:  +0.0  1:  +0.5  2:  +0.2
+   pitcher's pitches so far           0:  +0.0  25:  -0.4  50:  -1.8  75:  -3.7  100:  -5.1
+   times facing this pitcher today    1:  +0.0  2:  +5.7  3:  +9.4  4: +10.4
+   pitch number in the PA             1:  +0.0  3:  +0.5  5:  +1.6  7:  +2.4  9:  +3.6
+
+accounting with V3 inputs vs the paper's version (1223 hitter-seasons, 150+ PA):
+   part       share (V3)  year-to-year r (V3)  corr with paper version
+   SQUARING          35%                 0.51                    0.990
+   INPUTS            25%                 0.89                    0.991
+   LUCK              19%                 0.25                    1.000
+   DECISIONS         12%                 0.79                    1.000
+   OTHER             11%                 0.43                    1.000
+   WHIFFS            -2%                 0.82                    1.000

@@ -1,0 +1,29 @@
+==============================================================================================================
+B design: 135 changes with outcomes, 35 late (< 59 days of season left): width 27/83, depth 3/23, angle 5/29
+==============================================================================================================
+Mean effect per lever, late vs the rest (paper matching | gbm counterfactual), xwOBA points:
+  width  late      n  27 | match20   +8.3 (SE  7.5) | gbm   +1.6 (SE  7.1) | naive   +1.8
+  width  not late  n  56 | match20  +12.1 (SE  4.4) | gbm   +7.7 (SE  3.7) | naive  +10.0
+  depth  late      n   3 | match20  +17.2 (SE  1.3) | gbm  +24.5 (SE 11.6) | naive  +22.9
+  depth  not late  n  20 | match20  +11.1 (SE 12.1) | gbm  +14.1 (SE 10.4) | naive  +33.3
+  angle  late      n   5 | match20   +5.7 (SE 32.9) | gbm   +6.9 (SE 29.7) | naive  -11.0
+  angle  not late  n  24 | match20   -3.1 (SE 10.2) | gbm   -6.0 (SE  8.7) | naive   -6.5
+
+Bayesian model, posterior mean [90% interval] (* excludes 0): all changes vs without the late changes
+  cell                                       match20 all         match20 no-late       bias-corr no-late                 gbm all             gbm no-late
+  sweet: per 3 in DEEPER          +1.55 [ +0.40, +2.67]*  +1.81 [ +0.59, +3.05]*  +1.33 [ +0.14, +2.56]*  +1.28 [ +0.18, +2.37]*  +1.26 [ +0.07, +2.49]*
+  xwoba: after-slump: width      +13.67 [ +5.16,+22.19]* +14.64 [ +4.55,+24.79]* +10.08 [ -0.03,+20.22]   +7.85 [ -0.04,+15.91]   +8.70 [ -1.19,+18.97] 
+  xwoba: after-slump: depth      +18.09 [ +2.25,+33.73]* +16.53 [ -0.55,+33.22]  +13.62 [ -3.18,+29.95]  +15.50 [ +0.43,+30.29]* +14.25 [ -2.52,+30.72] 
+  K: after-slump: width           -1.12 [ -2.07, -0.16]*  -2.01 [ -3.14, -0.85]*  -1.59 [ -2.72, -0.46]*  -0.60 [ -1.51, +0.30]   -1.44 [ -2.57, -0.29]*
+  chase: after-slump: angle       +1.88 [ +0.52, +3.22]*  +1.76 [ +0.32, +3.20]*  +1.05 [ -0.31, +2.48]   +1.06 [ -0.22, +2.28]   +0.91 [ -0.42, +2.31] 
+  whiff: per 3 in WIDER           -0.25 [ -0.74, +0.25]   -0.63 [ -1.23, -0.03]*  -0.53 [ -1.14, +0.06]   -0.49 [ -0.96, -0.04]*  -0.60 [ -1.20, +0.01] 
+
+==============================================================================================================
+U design (Figure 3): effect beyond bounce-back, xwOBA points, all vs without late changes (match20 | gbm)
+==============================================================================================================
+  width:WIDER     all n  47:  +16.1 ( 5.0) |  +11.5 ( 4.9)   no-late n  30:  +20.1 ( 6.1) |  +18.9 ( 5.6)
+  width:NARROWER  all n  31:  +16.5 ( 7.1) |  +15.2 ( 5.3)   no-late n  21:  +16.9 ( 8.7) |  +14.8 ( 6.7)
+  depth:BACK      all n  11:  +29.8 (13.6) |  +35.7 (10.3)   no-late n  11:  +29.8 (13.6) |  +35.7 (10.3)
+  depth:UP        all n  12:   +7.3 (13.2) |  +13.3 (14.9)   no-late n   9:   +2.7 (17.5) |   +5.8 (19.4)
+  bounce-back share (all, n 101): match20 29% | gbm 34%  (raw gain +23.6)
+  bounce-back share (no-late, n 71): match20 28% | gbm 27%  (raw gain +25.6)

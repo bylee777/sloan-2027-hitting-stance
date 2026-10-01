@@ -1,0 +1,14 @@
+
+=== LHB (956,207 pitches)
+run value per 100 pitches: vs opposite +0.19, vs same -0.38, gap -0.58
+   gap from pitch MIX (pitchers throw different pitches): +0.04; from RESULTS per pitch: -0.61 = breaking -0.26, fastball -0.35, offspeed -0.01
+   fastball  share opp 54.3% same 58.6% | chase 23.7 -> 26.4 | whiff 16.7 -> 17.2 | xwOBA on contact 387 -> 354 | rv/100 +0.20 -> -0.39
+   breaking  share opp 26.3% same 37.9% | chase 30.6 -> 31.0 | whiff 29.2 -> 33.4 | xwOBA on contact 385 -> 332 | rv/100 +0.29 -> -0.40
+   offspeed  share opp 19.4% same  3.5% | chase 33.5 -> 36.8 | whiff 28.7 -> 33.3 | xwOBA on contact 336 -> 359 | rv/100 +0.04 -> -0.15
+
+=== RHB (1,144,819 pitches)
+run value per 100 pitches: vs opposite +0.08, vs same -0.15, gap -0.24
+   gap from pitch MIX (pitchers throw different pitches): -0.00; from RESULTS per pitch: -0.23 = breaking -0.03, fastball -0.21, offspeed +0.01
+   fastball  share opp 54.2% same 56.8% | chase 25.1 -> 27.0 | whiff 17.0 -> 17.6 | xwOBA on contact 383 -> 371 | rv/100 +0.11 -> -0.25
+   breaking  share opp 26.1% same 35.8% | chase 31.5 -> 32.1 | whiff 29.7 -> 32.0 | xwOBA on contact 365 -> 346 | rv/100 +0.02 -> -0.08
+   offspeed  share opp 19.7% same  7.4% | chase 35.6 -> 36.2 | whiff 31.1 -> 32.7 | xwOBA on contact 338 -> 362 | rv/100 +0.07 -> +0.21

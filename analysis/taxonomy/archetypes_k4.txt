@@ -1,0 +1,88 @@
+k=4: mean assignment confidence 0.89; share >= 0.8: 78%
+
+SETUP & MOVE (medians; in / deg)
+arch                    1     2     3     4
+depth_in             29.1  29.8  27.3  24.2
+off_plate_in         27.7  27.6  27.9  27.4
+width_in             28.4  29.7  29.8  34.0
+stance_angle        -10.0 -22.8  -1.0  -9.6
+front_turn0           6.9  11.3   2.1   8.5
+stride_len_in        17.1  21.9  15.0  12.3
+stride_dir          -18.7 -32.2  -2.5 -37.5
+width_land_in        41.5  41.0  41.6  40.1
+front_turn2          40.0  43.8  40.7  42.0
+back_foot_move_in     4.1   5.4   4.1   4.0
+contact_vs_plate_in   2.1   1.7   3.1   4.9
+
+SWING (medians)
+arch              1      2      3      4
+bat_speed     71.22  70.75  70.86  70.24
+swing_len      7.26   7.28    7.2   7.21
+attack_angle   9.48   9.09   9.69    9.5
+attack_dir    -1.26  -1.26  -0.81   -0.8
+path_tilt     32.25  31.89  32.32  32.49
+height_in      72.0   72.0   72.0   72.0
+
+OUTCOMES (medians; rates in %)
+arch                  1          2          3          4
+K                22.881     20.819     23.113     20.669
+BB                8.108      8.172       8.23      8.008
+chase            29.032      28.91     29.151     29.132
+whiff            22.944     21.982     23.562     22.115
+zone_contact     85.352      86.35     84.701      86.43
+ev                88.73      88.34     88.814     87.878
+sweet         35.338346  35.238095  35.850834  35.987261
+xwoba_con         0.369      0.357      0.366      0.356
+xwoba             0.313      0.313      0.313      0.309
+platoon_gap        0.03      0.028      0.029      0.026
+
+share of hitter-seasons: {1: 0.38, 2: 0.23, 3: 0.25, 4: 0.14}
+
+clearest examples (highest assignment confidence, >= 450 PA):
+  1: Marte, Ketel 2026; Benintendi, Andrew 2026; Bellinger, Cody 2024; Carroll, Corbin 2026; Frelick, Sal 2025; Hayes, Ke'Bryan 2025
+  2: Devers, Rafael 2024; Herrera, Iván 2026; Devers, Rafael 2025; Albies, Ozzie 2025; Herrera, Iván 2025; Devers, Rafael 2026
+  3: Turner, Trea 2025; Bichette, Bo 2025; Turner, Trea 2026; Turner, Trea 2024; Chourio, Jackson 2026; Stott, Bryson 2024
+  4: Kwan, Steven 2025; Kwan, Steven 2024; Kwan, Steven 2026; Altuve, Jose 2024; Altuve, Jose 2025; Frazier, Adam 2025
+
+year-to-year: same archetype next season 80% (n 565); chance level 28%
+arch_next     1     2     3     4
+arch                             
+1          0.82  0.10  0.07  0.01
+2          0.11  0.83  0.02  0.04
+3          0.16  0.02  0.78  0.04
+4          0.12  0.05  0.06  0.77
+
+                name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Crow-Armstrong, Pete 2024     1  0.75     28.65     28.23          17.04         -3.20
+Crow-Armstrong, Pete 2025     1  0.88     30.25     33.72          17.76         -2.38
+Crow-Armstrong, Pete 2026     3  0.87     32.55     23.03          24.46          1.14
+
+      name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Jung, Josh 2024     3   1.0     21.40     25.26          22.51         -1.33
+Jung, Josh 2025     3   1.0     22.57     23.30          22.69         -5.15
+Jung, Josh 2026     3   1.0     21.41     24.35          20.18         -2.02
+
+        name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Altuve, Jose 2024     4   1.0     11.24     29.19          22.87        -14.88
+Altuve, Jose 2025     4   1.0     12.84     29.01          26.51        -19.54
+Altuve, Jose 2026     4   1.0     12.35     28.93          27.14        -13.43
+
+        name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Burger, Jake 2024     3   1.0     23.26     23.13          20.61         -3.50
+Burger, Jake 2025     3   1.0     23.69     23.29          19.77         -2.69
+Burger, Jake 2026     3   1.0     22.20     25.64          18.30          4.42
+
+        name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Judge, Aaron 2024     3  0.92     29.72     31.69           9.46         -6.75
+Judge, Aaron 2025     3  0.99     26.23     29.90          11.18         -5.55
+Judge, Aaron 2026     3  0.99     25.35     30.32          10.41         -6.60
+
+      name year  arch  conf  depth_in  width_in  stride_len_in  stance_angle
+Soto, Juan 2024     4  0.51     25.52     41.61           8.21        -12.87
+Soto, Juan 2025     4  1.00     24.85     41.95           6.15         -9.97
+Soto, Juan 2026     4  1.00     23.88     43.02           7.09        -12.75
+
+ROBUSTNESS
+  silhouette: gmm 0.042, kmeans 0.104, ward 0.085
+  agreement across methods (adjusted Rand): gmm-kmeans 0.167, gmm-ward 0.168, kmeans-ward 0.273
+  agreement across seasons (fit on each season, label all; adjusted Rand): 2024-2025 0.345, 2024-2026 0.278, 2025-2026 0.261

@@ -1,0 +1,29 @@
+changers with full windows: 121 of 247; control reference dates: 6,083
+
+(1) TRIGGER — run-up minus baseline (the 30 days before the change vs 31-90 days before):
+   xwoba     changers -13.12 (SE 5.11) vs controls  -5.32
+   whiff     changers  +0.27 (SE 0.46) vs controls  +0.07
+   K         changers  +0.50 (SE 0.51) vs controls  +0.41
+   chase     changers  +0.48 (SE 0.49) vs controls  +0.49
+   bat_speed changers  +0.06 (SE 0.09) vs controls  +0.19
+   hazard of changing: per 10 pts xwOBA drop in the run-up odds x1.09 (z +4.4); per +1 pp whiff odds x1.00 (z -0.1)
+
+(2) EFFECT BEYOND BOUNCE-BACK — after (0-59 d) minus run-up (30 d before); changers vs matched slump-alike controls
+   width:WIDER (n 53)
+      whiff     naive before/after  -1.60 | matched non-changers' bounce-back  -0.04 | EFFECT  -1.66 (SE 0.70, z -2.4)
+      K         naive before/after  -1.33 | matched non-changers' bounce-back  -0.61 | EFFECT  -0.65 (SE 0.75, z -0.9)
+      bat_speed naive before/after  +0.13 | matched non-changers' bounce-back  -0.07 | EFFECT  +0.21 (SE 0.15, z +1.4)
+      xwoba     naive before/after +31.06 | matched non-changers' bounce-back +13.91 | EFFECT +16.12 (SE 4.97, z +3.2)
+   width:NARROWER (n 42)
+      bat_speed naive before/after  +0.13 | matched non-changers' bounce-back  -0.04 | EFFECT  +0.18 (SE 0.15, z +1.2)
+      whiff     naive before/after  -0.36 | matched non-changers' bounce-back  -0.24 | EFFECT  +0.32 (SE 0.72, z +0.4)
+      xwoba     naive before/after +19.91 | matched non-changers' bounce-back  +3.24 | EFFECT +16.50 (SE 7.10, z +2.3)
+   depth:BACK (n 11)
+      chase     naive before/after  -3.02 | matched non-changers' bounce-back  -0.57 | EFFECT  -2.44 (SE 1.17, z -2.1)
+      sweet     naive before/after  +1.94 | matched non-changers' bounce-back  +0.43 | EFFECT  +1.51 (SE 3.20, z +0.5)
+      xwoba     naive before/after +29.64 | matched non-changers' bounce-back  -0.11 | EFFECT +29.75 (SE 13.57, z +2.2)
+      K         naive before/after  -0.36 | matched non-changers' bounce-back  +0.30 | EFFECT  -0.66 (SE 1.43, z -0.5)
+   depth:UP (n 15)
+      chase     naive before/after  +0.99 | matched non-changers' bounce-back  -0.17 | EFFECT  +0.78 (SE 1.44, z +0.5)
+      sweet     naive before/after  -0.12 | matched non-changers' bounce-back  -0.16 | EFFECT  -0.40 (SE 3.43, z -0.1)
+      xwoba     naive before/after  +5.53 | matched non-changers' bounce-back  -4.77 | EFFECT  +7.26 (SE 13.17, z +0.6)

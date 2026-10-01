@@ -1,0 +1,9 @@
+task,model,test_logloss,test_auc,secs
+chase,boost: perception,0.4301495688511329,0.8400663416287732,12
+chase,boost: FULL raw pitch data,0.4205461333755609,0.8486432779171182,14
+chase,NETWORK: perception + hitter embedding,0.4065747390655314,0.8614416128331044,9
+chase,(constant rate),0.594206860515591,0.5,0
+whiff,boost: perception,0.43824490216967393,0.7739503646786056,5
+whiff,boost: FULL raw pitch data,0.43538627612296704,0.7798089470997396,15
+whiff,NETWORK: perception + hitter embedding,0.4272624295559136,0.7878646005828257,7
+whiff,(constant rate),0.5414093443615016,0.5,0

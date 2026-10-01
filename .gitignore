@@ -1,0 +1,21 @@
+# downloaded or rebuilt by the scripts (see README)
+analysis/raw/
+analysis/viz/
+analysis/dl/pitches_feat*.parquet
+analysis/hitter_diagnosis_pitches.parquet
+analysis/matchup_pa.parquet
+analysis/vlad_bip.parquet
+analysis/itt_posteriors.pkl
+analysis/stance_bayes_v2_post_*.pkl
+analysis/matchup_model.pkl
+
+# built paper
+analysis/paper/Sloan_Paper_Draft.docx
+analysis/paper/Sloan_Paper_Draft.pdf
+
+__pycache__/
+.DS_Store
+
+# kept local for now (not published)
+analysis/paper/content.py
+README.md

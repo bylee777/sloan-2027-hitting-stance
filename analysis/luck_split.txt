@@ -1,0 +1,30 @@
+games matched to weather: 100.0% of 7,216
+balls in play: 367,022; with defense, weather and venue: 364,893 (99.4%)
+
+per ball in play (runs; park-season fixed effects; clustered by batter):
+   fielding team +1 SD of OAA         -0.00076 (z -2.4)
+   fly ball, per mph blowing out      +0.00111 (z +3.5)
+   line drive, per mph blowing out    -0.00061 (z -1.3)
+   fly ball, per degree F warmer      +0.00140 (z +7.8)
+   line drive, per degree F warmer    -0.00019 (z -0.8)
+   expected if OAA converts to runs at ~0.75 per out: -0.00462 per ball (OAA SD 25.0 outs over ~4,054 balls in play per team-season)
+   park effects (visitors, net of defense and weather): SD across park-seasons 0.0034 runs per ball
+
+hitter-seasons (150+ PA): 1223; luck matches the paper's accounting: corr 1.0000, max |diff| 0.159 runs/600
+
+what luck is made of (794 hitter-seasons, 300+ PA; runs per 600 PA): SD | share of luck variance (cov/var)
+   defense faced                  SD  0.05 |   0.0%
+   park                           SD  0.64 |   0.8%
+   weather (wind + temperature)   SD  0.19 |   0.1%
+   everything else                SD  9.78 |  99.1%
+
+year-to-year r (369 pairs): luck +0.25 | other luck (defense, park, weather removed) +0.25 | park +0.16 | defense +0.39
+
+Guerrero (runs per 600 PA):
+       PA  LUCK  DEF  PARK   WX  OTHER_LUCK
+year                                       
+2024  685  -4.1  0.0   0.7  0.2        -5.1
+2025  672  -2.0  0.1  -0.3  0.1        -1.9
+2026  592 -15.6  0.0  -1.0  0.1       -14.7
+
+hardest / easiest defense faced (runs per 600 PA): -0.18 / +0.16; park range -2.2 / +1.9; weather range -0.4 / +0.8

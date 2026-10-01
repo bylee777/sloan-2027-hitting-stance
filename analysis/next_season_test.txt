@@ -1,0 +1,21 @@
+hitter pairs: 369 (189 for 2024->25, 180 for 2025->26)
+
+=== predicting NEXT-SEASON wOBA: out-of-sample R^2 (10-fold by hitter | train 2024->25, test 2025->26)
+   (a) wOBA                  0.192 |  0.096
+   (b) xwOBA                 0.218 |  0.126
+   (c) total run value       0.182 |  0.069
+   (d) six parts             0.205 |  0.090
+      learned weights (per run of each part): decisions +1.40, whiffs +1.22, inputs +1.14, squaring +1.05, luck +0.46, other +0.97
+   (e) four skill parts      0.186 |  0.074
+   (f) xwOBA + six parts     0.209 |  0.101
+
+=== predicting NEXT-SEASON total run value: out-of-sample R^2 (10-fold by hitter | train 2024->25, test 2025->26)
+   (a) wOBA                  0.174 |  0.086
+   (b) xwOBA                 0.209 |  0.129
+   (c) total run value       0.176 |  0.065
+   (d) six parts             0.206 |  0.079
+      learned weights (per run of each part): decisions +0.84, whiffs +0.61, inputs +0.50, squaring +0.56, luck +0.22, other +0.35
+   (e) four skill parts      0.199 |  0.074
+   (f) xwOBA + six parts     0.206 |  0.083
+
+six parts minus xwOBA, next-season wOBA R^2: -0.029 (95% -0.067 to +0.013); better in 10% of resamples

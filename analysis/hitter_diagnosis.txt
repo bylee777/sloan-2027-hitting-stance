@@ -1,0 +1,60 @@
+hitter-seasons (150+ PA): 1223; parts add up exactly: max |sum - total| = 1.4e-14
+xwOBA-on-contact model (cross-fitted by hitter): R^2 0.086
+
+=== what each part is worth and how much of it is SKILL (year-to-year r, 369 hitter pairs, 300+ PA)
+part        SD across hitters  year-to-year r  share of total variance
+DECISIONS              7.2 runs            0.79                     12%
+WHIFFS                 7.3 runs            0.82                     -2%
+INPUTS                11.0 runs            0.89                     23%
+SQUARING              10.4 runs            0.53                     37%
+LUCK                   9.8 runs            0.25                     19%
+OTHER                  4.8 runs            0.43                     11%
+TOTAL                 15.8 runs            0.42                    100%
+
+=== 2026 top and bottom 8 (runs per 600 PA vs league average; parts shrunk by reliability)
+                name side  PA  TOTAL  DECISIONS_s  WHIFFS_s  INPUTS_s  SQUARING_s  LUCK_s
+    De La Cruz, Elly    R 181   69.2         -1.0      -1.4      21.9         2.6     3.6
+     Alvarez, Yordan    L 634   47.2         -5.6       7.2      18.0        17.4    -4.2
+Crow-Armstrong, Pete    L 700   41.3         -6.0       0.6      17.0         9.6     3.5
+          Soto, Juan    L 447   40.6         12.9       1.2      -0.5        11.6    -1.9
+  Contreras, Willson    R 532   40.2         -5.0      -1.7      11.1         9.1     4.3
+      Gasper, Mickey    L 192   37.7          7.4       1.4      -1.0         3.6     0.0
+         Kurtz, Nick    L 426   32.7          8.8     -12.2      23.7         1.6     1.0
+           Rice, Ben    L 646   32.6          4.3      -2.2      11.3         8.4    -0.2
+                name side  PA  TOTAL  DECISIONS_s  WHIFFS_s  INPUTS_s  SQUARING_s  LUCK_s
+         Heim, Jonah    L 198  -36.7         -2.1       2.4      -4.6        -6.5    -1.8
+Gurriel Jr., Lourdes    R 201  -38.7         -6.1       2.4       1.8        -5.2    -2.0
+          Romo, Drew    L 165  -40.1         -2.1      -3.5      -3.5        -5.1    -1.0
+       Marte, Noelvi    R 201  -40.1        -11.3       2.9       3.5        -7.9    -0.7
+      Taveras, Leody    R 158  -40.4         -5.9       0.1      -0.6        -3.8    -0.7
+    Acuña, Luisangel    R 220  -43.3         -4.4      -0.3      -2.6        -7.3    -2.0
+       Outman, James    L 174  -44.4         -2.6     -14.9       5.4        -3.2    -0.1
+     Hayes, Ke'Bryan    R 235  -49.9         -5.3      -0.9      -6.5         0.4    -4.9
+
+Guerrero Jr., Vladimir:
+year  PA  TOTAL  DECISIONS  WHIFFS  INPUTS  SQUARING  LUCK  OTHER
+2024 683   43.0        0.8     6.0     3.4      30.2  -4.1    6.6
+2025 672   30.2        6.0     3.1    -2.8      16.3  -2.0    9.7
+2026 592   -8.1        2.3     4.9     0.1      -6.2 -15.6    6.4
+
+Crow-Armstrong, Pete:
+year  PA  TOTAL  DECISIONS  WHIFFS  INPUTS  SQUARING  LUCK  OTHER
+2024 406   -8.2      -10.5    -2.7     6.1      -7.6   4.7    2.0
+2025 646    3.4      -11.9    -1.3    10.8       3.7   6.2   -4.1
+2026 700   41.3       -7.2     0.7    18.6      16.0  11.2    2.0
+
+Clement, Ernie:
+year  PA  TOTAL  DECISIONS  WHIFFS  INPUTS  SQUARING  LUCK  OTHER
+2024 450    1.7       -7.8    14.4   -18.1      -3.8  15.8    1.1
+2025 587   -7.6       -6.3    10.3   -18.2      -8.4   9.2    5.7
+2026 605  -17.8      -12.4    10.8   -17.2     -17.0  11.5    6.4
+
+Okamoto, Kazuma:
+year  PA  TOTAL  DECISIONS  WHIFFS  INPUTS  SQUARING  LUCK  OTHER
+2026 617   13.0        4.0    -8.8    11.0       3.4   4.8   -1.5
+
+Kirk, Alejandro:
+year  PA  TOTAL  DECISIONS  WHIFFS  INPUTS  SQUARING  LUCK  OTHER
+2024 385   -5.4       -1.2    13.9   -10.6       0.0  -6.3   -1.3
+2025 504    6.0        2.9    11.8    -0.8       3.7 -12.7    1.0
+2026 293   10.7        3.5     9.3    -6.7      -9.3  10.9    3.0

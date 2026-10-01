@@ -1,0 +1,43 @@
+2026 regulars with a plan (250+ PA): 301; with at least one clear gap (> 1 run below average): 280
+main gap: {'INPUTS': 86, 'WHIFFS': 80, 'SQUARING': 60, 'DECISIONS': 54}
+share whose main gap has a STANCE lever with evidence: 20%
+median potential if half the main gap closes: 3.6 runs per 600 PA
+
+Guerrero Jr., Vladimir: total -8.1 | decisions +1.8, whiffs +4.1, inputs -2.3, squaring -1.9, luck -4.3
+   1) INPUTS (+1.1 if half closes): flat swing path (attack angle 1°, league 9°) [coaching]
+   2) SQUARING (+1.0): not squaring the ball up given his swing: timing consistency / contact precision (check health if new) [coaching]
+   biggest decline vs his 2024-25: SQUARING -15.4 -> regaining half = +7.7
+
+Clement, Ernie: total -17.8 | decisions -10.1, whiffs +9.0, inputs -17.7, squaring -7.9, luck +3.2
+   1) INPUTS (+8.8 if half closes): bat speed 66.6 mph (4th pct): strength / intent; meets the ball far out front (10 in) with low sweet-spot: stance ~3 in deeper (sweet-spot +1.6 pp per 3 in) [moderate (stance)]
+   2) DECISIONS (+5.0): chases 42% (99th pct): approach / pitch recognition; stance: ~3 in deeper (stands 23 in; model chase -0.5 pp per 3 in, validated on 2026) [coaching + moderate (stance)]
+   biggest decline vs his 2024-25: SQUARING -6.8 -> regaining half = +3.4
+
+Okamoto, Kazuma: total +13.0 | decisions +3.3, whiffs -7.4, inputs +16.7, squaring -2.3, luck +1.4
+   1) WHIFFS (+3.7 if half closes): whiffs 30% (90th pct): contact work; stance: wider (narrower than typical for his height; model whiffs -0.3 pp per 3 in) [coaching + moderate (stance)]
+   2) SQUARING (+1.2): not squaring the ball up given his swing: timing consistency / contact precision (check health if new) [coaching]
+
+Kirk, Alejandro: total +10.7 | decisions +2.4, whiffs +6.6, inputs -5.7, squaring -3.3, luck +1.7
+   1) INPUTS (+2.8 if half closes): flat swing path (attack angle 5°, league 9°); meets the ball far out front (10 in) with low sweet-spot: stance ~3 in deeper (sweet-spot +1.6 pp per 3 in) [moderate (stance)]
+   2) SQUARING (+1.7): not squaring the ball up given his swing: timing consistency / contact precision (check health if new) [coaching]
+   biggest decline vs his 2024-25: SQUARING -6.0 -> regaining half = +3.0
+
+Crow-Armstrong, Pete: total +41.3 | decisions -6.0, whiffs +0.6, inputs +17.6, squaring +8.9, luck +3.5
+   1) DECISIONS (+3.0 if half closes): chases 31% (81th pct): approach / pitch recognition [coaching]
+   biggest decline vs his 2024-25: WHIFFS +2.2
+
+Giménez, Andrés: total -14.6 | decisions -6.4, whiffs +4.7, inputs -11.6, squaring -1.4, luck +0.5
+   1) INPUTS (+5.8 if half closes): bat speed 67.4 mph (6th pct): strength / intent [coaching]
+   2) DECISIONS (+3.2): chases 39% (96th pct): approach / pitch recognition; stance: ~3 in deeper (stands 26 in; model chase -0.5 pp per 3 in, validated on 2026) [coaching + moderate (stance)]
+   biggest decline vs his 2024-25: DECISIONS -2.8
+
+=== Blue Jays (runs per 600 PA vs league average, shrunk)
+                  name  PA  total  decisions  whiffs  inputs  squaring  luck     gap1  gain1 biggest_decline  decline_runs
+        Clement, Ernie 605  -17.8      -10.1     9.0   -17.7      -7.9   3.2   INPUTS    8.8        SQUARING          -6.8
+       Giménez, Andrés 495  -14.6       -6.4     4.7   -11.6      -1.4   0.5   INPUTS    5.8       DECISIONS          -2.8
+          Straw, Myles 318   -9.1        3.7     4.8   -12.8      -2.2  -0.5   INPUTS    6.4                           NaN
+Guerrero Jr., Vladimir 592   -8.1        1.8     4.1    -2.3      -1.9  -4.3   INPUTS    1.1        SQUARING         -15.4
+         Lukes, Nathan 433   -4.0       -4.9     9.7   -15.4       1.6   1.1   INPUTS    7.7        SQUARING          -4.0
+       Kirk, Alejandro 293   10.7        2.4     6.6    -5.7      -3.3   1.7   INPUTS    2.8        SQUARING          -6.0
+       Okamoto, Kazuma 617   13.0        3.3    -7.4    16.7      -2.3   1.4   WHIFFS    3.7                           NaN
+      Springer, George 506   13.7        8.6     1.6    12.0     -13.7   4.0 SQUARING    6.8        SQUARING         -10.6

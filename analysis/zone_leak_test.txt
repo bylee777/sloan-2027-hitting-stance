@@ -1,0 +1,6 @@
+out-of-zone pitches: train 2024 355,989, test 2025 348,370; swing rate 0.281
+  base: location + type + speed            test AUC 0.785
+  + per-pitch sz_top / sz_bot              test AUC 0.991
+  + deviation from hitter-season median    test AUC 0.945
+  SD of zone top / bottom around the hitter-season median on takes : 1.13 / 0.94 in
+  SD of zone top / bottom around the hitter-season median on swings: 0.63 / 0.39 in

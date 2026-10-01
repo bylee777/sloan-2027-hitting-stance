@@ -1,0 +1,17 @@
+traits available for 466 hitters; train months 3,640 (2024-25), test months 1,455 (2026)
+
+=== xwOBA (pts): TRAINED on 2024-25 (effect of +3 in; x = change per 1 SD of trait)
+   depth     base  +0.80 (z +0.4) | height +5.78 (z +2.0) | weight -1.55 (z -0.5) | batspeed -0.95 (z -0.4) | chase +2.92 (z +1.4) | legproxy -1.75 (z -0.9)
+   width     base  -2.20 (z -1.2) | height +6.03 (z +2.9) | weight -0.20 (z -0.1) | batspeed -4.99 (z -2.6) | chase +2.71 (z +1.6) | legproxy -2.14 (z -1.1)
+   offplate  base  +4.29 (z +1.4) | height +0.10 (z +0.0) | weight +2.32 (z +0.5) | batspeed -1.03 (z -0.3) | chase +0.59 (z +0.2) | legproxy +1.75 (z +0.6)
+   joint test (traits change nothing): chi2(15) = 19.5, p = 0.190
+   VALIDATION on 2026 (1,455 hitter-months, 341 hitters): personalization coefficient lambda = +0.07 (SE 0.37, z +0.2)   [1 = real & calibrated, 0 = noise]
+   2026 average effects (+3 in): depth +7.54 (z +2.1), width -3.49 (z -1.5), offplate +8.58 (z +2.0)
+
+=== strikeout % (pp): TRAINED on 2024-25 (effect of +3 in; x = change per 1 SD of trait)
+   depth     base  +0.01 (z +0.0) | height +0.01 (z +0.0) | weight +0.02 (z +0.1) | batspeed -0.06 (z -0.2) | chase -0.17 (z -0.6) | legproxy +0.20 (z +0.8)
+   width     base  -0.18 (z -0.8) | height -0.51 (z -1.7) | weight -0.19 (z -0.6) | batspeed +0.53 (z +2.3) | chase -0.38 (z -1.7) | legproxy +0.33 (z +1.3)
+   offplate  base  -0.22 (z -0.6) | height -0.00 (z -0.0) | weight +0.61 (z +1.3) | batspeed -0.52 (z -1.2) | chase -0.11 (z -0.3) | legproxy -0.28 (z -0.8)
+   joint test (traits change nothing): chi2(15) = 18.3, p = 0.249
+   VALIDATION on 2026 (1,455 hitter-months, 341 hitters): personalization coefficient lambda = +0.11 (SE 0.30, z +0.4)   [1 = real & calibrated, 0 = noise]
+   2026 average effects (+3 in): depth -0.71 (z -2.3), width +0.21 (z +0.8), offplate -0.07 (z -0.2)

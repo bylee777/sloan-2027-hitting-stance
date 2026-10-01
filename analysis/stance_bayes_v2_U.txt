@@ -1,0 +1,19 @@
+angle events: 97; dropped 23 within 30 days of a width/depth change
+stance changes with usable windows: 186 of 321 (115 width, 29 depth, 42 angle; 2024-25 116, 2026 70); control dates 16,157
+
+=== VALIDATION: fit on 2024-25 changes, predict the 2026 changes (higher log density = better)
+outcome     full model  intercept only  no effect | full minus no-effect | 80% coverage | corr(pred, obs) | n
+whiff           -201.7          -200.3     -201.0 |    -0.64 |   87% | +0.02 | 69
+chase           -221.1          -221.8     -221.8 |    +0.65 |   72% | +0.10 | 69
+sweet           -244.5          -242.2     -241.4 |    -3.03 |   84% | +0.07 | 69
+K               -222.8          -222.4     -222.9 |    +0.09 |   84% | +0.03 | 69
+xwoba           -352.6          -352.2     -354.1 |    +1.48 |   99% | +0.22 | 69
+bat_speed        -92.6           -88.2      -86.2 |    -6.41 |   84% | -0.11 | 69
+
+=== FULL POSTERIOR (all seasons): posterior mean [90% credible interval]; tau = spread of individual responses
+whiff      tau 0.56 | after-slump change: width: -0.86 [-1.57, -0.14] | after-slump change: depth: -0.99 [-2.38, +0.38] | after-slump change: angle: -0.28 [-1.33, +0.75] | per 3 in WIDER: -0.33 [-0.80, +0.15] | extra if chase-prone (wider): -0.11 [-0.83, +0.61] | per 3 in DEEPER: -0.32 [-0.94, +0.28] | per 10 deg more CLOSED: -0.02 [-0.68, +0.65]
+chase      tau 2.69 | after-slump change: width: -0.28 [-1.19, +0.59] | after-slump change: depth: -0.91 [-2.55, +0.73] | after-slump change: angle: +0.06 [-1.22, +1.36] | per 3 in WIDER: -0.33 [-0.90, +0.25] | extra if chase-prone (wider): +1.01 [+0.14, +1.88] | per 3 in DEEPER: -0.37 [-1.13, +0.40] | per 10 deg more CLOSED: +0.22 [-0.63, +1.10]
+sweet      tau 2.43 | after-slump change: width: -0.53 [-1.93, +0.88] | after-slump change: depth: +0.58 [-2.05, +3.16] | after-slump change: angle: +0.50 [-1.52, +2.54] | per 3 in WIDER: +0.79 [-0.18, +1.74] | extra if chase-prone (wider): +0.64 [-0.73, +2.01] | per 3 in DEEPER: +1.14 [-0.06, +2.31] | per 10 deg more CLOSED: +0.06 [-1.25, +1.39]
+K          tau 0.93 | after-slump change: width: -1.10 [-2.10, -0.15] | after-slump change: depth: -0.84 [-2.63, +0.99] | after-slump change: angle: -0.17 [-1.55, +1.25] | per 3 in WIDER: +0.55 [-0.08, +1.19] | extra if chase-prone (wider): -1.34 [-2.32, -0.39] | per 3 in DEEPER: +0.31 [-0.50, +1.16] | per 10 deg more CLOSED: -0.27 [-1.18, +0.63]
+xwoba      tau 5.51 | after-slump change: width: +17.75 [+9.27, +26.30] | after-slump change: depth: +14.45 [-1.74, +30.99] | after-slump change: angle: +5.66 [-6.41, +17.76] | per 3 in WIDER: -2.61 [-8.25, +2.90] | extra if chase-prone (wider): +2.34 [-6.13, +10.89] | per 3 in DEEPER: +5.25 [-2.12, +12.61] | per 10 deg more CLOSED: -2.35 [-10.15, +5.42]
+bat_speed  tau 0.78 | after-slump change: width: +0.11 [-0.05, +0.26] | after-slump change: depth: -0.09 [-0.39, +0.22] | after-slump change: angle: -0.04 [-0.28, +0.20] | per 3 in WIDER: +0.04 [-0.06, +0.14] | extra if chase-prone (wider): -0.09 [-0.25, +0.06] | per 3 in DEEPER: +0.13 [+0.00, +0.27] | per 10 deg more CLOSED: +0.08 [-0.07, +0.23]
