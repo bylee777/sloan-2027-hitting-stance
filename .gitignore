@@ -18,4 +18,3 @@ __pycache__/
 
 # kept local for now (not published)
 analysis/paper/content.py
-README.md
